@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Expedition Depots | VanVoyage</title>
+  <meta name="description" content="Reach the VanVoyage team, explore our 4 major overlanding depots in Boulder, Portland, Tahoe, and Moab, and browse answers to frequently asked questions.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Scroll Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN HEADER & NAVIGATION
+       At <=1024px: Shows ONLY Logo & Hamburger on the same row.
+       ========================================================================== -->
+  <header class="main-header header-hero-transparent">
+    <div class="container-fluid px-lg-5">
+      <div class="nav-container">
+        
+        <!-- VanVoyage Logo -->
+        <a href="index.html" class="brand-logo-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="220" height="48">
+            <defs>
+              <linearGradient id="navLogoGoldContact" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E2BE82" />
+                <stop offset="50%" stop-color="#C49A5A" />
+                <stop offset="100%" stop-color="#A66D45" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(6, 6)">
+              <path d="M24,2 L44,10 L44,30 C44,40 24,47 24,47 C24,47 4,40 4,30 L4,10 Z" fill="#18251F" stroke="url(#navLogoGoldContact)" stroke-width="2" />
+              <polygon points="10,34 20,18 27,28 34,14 40,34" fill="#141E19" stroke="#C49A5A" stroke-width="1.2" stroke-linejoin="round" />
+              <polygon points="20,18 23,23 18,23" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="34,14 37,20 31,20" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="24,6 26,11 30,12 26,13 24,18 22,13 18,12 22,11" fill="url(#navLogoGoldContact)" />
+              <path d="M8,38 Q24,34 40,38" fill="none" stroke="url(#navLogoGoldContact)" stroke-width="2" stroke-linecap="round" />
+            </g>
+            <g transform="translate(62, 32)">
+              <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="21" letter-spacing="3.5" fill="currentColor">
+                <tspan fill="#C49A5A">VAN</tspan><tspan fill="#E9E3D5">VOYAGE</tspan>
+              </text>
+              <text y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#E2BE82">
+                ADVENTURE TRAVEL • CAMPERVAN
+              </text>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Menu (> 1024px) -->
+        <ul class="nav-menu-desktop list-unstyled">
+          <li><a href="index.html" class="nav-link-custom">Home</a></li>
+          <li><a href="about.html" class="nav-link-custom">About Us</a></li>
+          <li><a href="vehicles.html" class="nav-link-custom">Vehicles</a></li>
+          <li><a href="destinations.html" class="nav-link-custom">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link-custom active">Contact</a></li>
+        </ul>
+
+        <!-- Desktop Actions & Theme Toggle (> 1024px) -->
+        <div class="nav-actions-desktop">
+          <button class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+          
+          <div class="nav-auth-slot d-flex align-items-center gap-2">
+            <a href="login.html" class="btn-outline-light btn-sm-custom">Login</a>
+            <a href="register.html" class="btn-gold btn-sm-custom">Register</a>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Button (<= 1024px) -->
+        <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav" aria-controls="mobileOffcanvasNav" aria-label="Open Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-mobile-menu" tabindex="-1" id="mobileOffcanvasNav">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/favicon.svg" alt="VanVoyage Emblem" width="32" height="32">
+        <span class="font-heading fw-bold text-gold" style="font-size: 1.2rem;">VANVOYAGE</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link"><span>Home</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="about.html" class="mobile-nav-link"><span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="vehicles.html" class="mobile-nav-link"><span>Vehicles</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="destinations.html" class="mobile-nav-link"><span>Destinations</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="contact.html" class="mobile-nav-link active"><span>Contact</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <div class="px-4 py-2">
+          <div class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 8px;">Customer Portal</div>
+          <a href="dashboard.html" class="mobile-nav-link py-2 px-0"><span>Customer Dashboard</span><i data-lucide="layout-dashboard" class="w-4 h-4 text-gold"></i></a>
+          <a href="saved-vehicles.html" class="mobile-nav-link py-2 px-0"><span>Saved Vehicles</span><i data-lucide="heart" class="w-4 h-4 text-gold"></i></a>
+        </div>
+      </div>
+      <div class="mobile-nav-footer">
+        <div class="d-flex align-items-center justify-content-between mb-3 p-2 rounded" style="background: var(--bg-muted);">
+          <span style="font-size: 0.875rem; font-weight: 600;">Theme Mode</span>
+          <button class="theme-toggle-btn" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+        </div>
+        <div class="mobile-auth-slot">
+          <a href="login.html" class="btn-outline-gold w-100 mb-2">Login to Account</a>
+          <a href="register.html" class="btn-gold w-100">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content" data-aos="fade-up">
+      <div class="eyebrow-badge">
+        <i data-lucide="headphones" class="w-4 h-4"></i>
+        <span>Concierge & Support</span>
+      </div>
+      <h1 class="display-3 font-heading fw-bold text-white mb-3">
+        Let’s Plan Your Next <br>
+        <span class="text-gold font-serif fst-italic">Expedition Together.</span>
+      </h1>
+      <p class="lead text-cream mx-auto" style="max-width: 680px; color: var(--color-cream);">
+        Our route scouts, fleet technicians, and customer concierges are available 7 days a week.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info Section -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      <div class="row g-5">
+        
+        <!-- Contact Information & Quick Channels -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="section-tag">Direct Lines</span>
+          <h2 class="section-title">Connect With Our Team</h2>
+          <p class="text-muted mb-4" style="line-height: 1.7;">
+            Whether you have questions regarding vehicle clearance, one-way depot drop-offs, or custom national park permits, our backcountry navigators are ready to assist.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-5">
+            <div class="dash-stat-card">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stat-icon-square"><i data-lucide="phone"></i></div>
+                <div>
+                  <div class="text-muted small">Toll-Free & 24/7 Roadside</div>
+                  <div class="fw-bold fs-5 text-gold">+1 (800) 584-VOYAGE</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stat-icon-square"><i data-lucide="mail"></i></div>
+                <div>
+                  <div class="text-muted small">General & Route Enquiries</div>
+                  <div class="fw-bold fs-5 text-main">adventures@vanvoyage.com</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="d-flex align-items-center gap-3">
+                <div class="stat-icon-square"><i data-lucide="clock"></i></div>
+                <div>
+                  <div class="text-muted small">Operating Hours</div>
+                  <div class="fw-bold text-main">Mon – Sun: 8:00 AM – 6:00 PM (MST)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social media icons -->
+          <div>
+            <h6 class="fw-bold font-heading mb-3">Follow The Journey</h6>
+            <div class="d-flex gap-3">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" style="background: var(--bg-muted); color: var(--text-main); border: 1px solid var(--border-medium);"><i data-lucide="instagram"></i></a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-icon-btn" style="background: var(--bg-muted); color: var(--text-main); border: 1px solid var(--border-medium);"><i data-lucide="youtube"></i></a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" style="background: var(--bg-muted); color: var(--text-main); border: 1px solid var(--border-medium);"><i data-lucide="facebook"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-icon-btn" style="background: var(--bg-muted); color: var(--text-main); border: 1px solid var(--border-medium);"><i data-lucide="twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Enquiry Form -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="van-card p-4 p-md-5">
+            <h3 class="fw-bold font-heading mb-2">Send An Enquiry</h3>
+            <p class="text-muted small mb-4">Fill out your travel details and a VanVoyage route concierge will respond within 4 business hours.</p>
+
+            <form id="contact-enquiry-form" onsubmit="event.preventDefault(); handleEnquirySubmit(this);">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label-custom">Your Full Name *</label>
+                  <input type="text" class="form-control-custom" placeholder="e.g. Alex Rivers" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom">Email Address *</label>
+                  <input type="email" class="form-control-custom" placeholder="alex@adventure.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-custom">Phone Number</label>
+                  <input type="tel" class="form-control-custom" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-custom">Topic of Interest</label>
+                  <select class="form-control-custom" id="enquiry-topic">
+                    <option value="Booking Support">Booking Support & Availability</option>
+                    <option value="Route Recommendations">Route Recommendations</option>
+                    <option value="One-Way Depot Dropoff">One-Way Depot Drop-off</option>
+                    <option value="Corporate / Film Rigs">Corporate & Film Fleet Rigs</option>
+                    <option value="Other">Other Inquiries</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-custom">Preferred Vehicle Class</label>
+                  <select class="form-control-custom">
+                    <option value="Any">No Preference / Any</option>
+                    <option value="4x4 Overlanding">4x4 Overlanding (Sprinter / Gladiator)</option>
+                    <option value="Campervan">Agile Pop-Top Campervan</option>
+                    <option value="Luxury RV">Luxury Class C Motorhome</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-custom">Estimated Travel Month</label>
+                  <input type="month" class="form-control-custom" value="2026-11">
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-custom">Your Message & Itinerary Goals *</label>
+                  <textarea class="form-control-custom" rows="4" placeholder="Tell us about the routes you want to explore, number of passengers, and any specific questions..." required></textarea>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn-gold w-100 py-3">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Submit Enquiry to Concierge</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Depot Hub Guide & Map Integration -->
+  <section class="py-5 bg-muted-custom">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">Depot Network</span>
+        <h2 class="section-title">4 Premier Expedition Hubs</h2>
+        <p class="section-subtitle">
+          Pick up your rig at one hub and drop off at another. Our multi-depot network makes grand cross-country road trips seamless.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-center">
+        <!-- Interactive Depot Selector Buttons -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="d-flex flex-column gap-3" id="depots-accordion">
+            
+            <div class="van-card p-3 cursor-pointer depot-item active" onclick="selectDepot(0, this)" style="border-left: 4px solid var(--color-gold);">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">Boulder Overland Hub (HQ)</h5>
+                <span class="badge-status badge-upcoming">Headquarters</span>
+              </div>
+              <div class="text-muted small mt-2">742 Overland Ridge Way, Boulder, CO 80302</div>
+              <div class="text-gold small mt-1">Gateway to: Rocky Mountain National Park & Alpine Divide</div>
+            </div>
+
+            <div class="van-card p-3 cursor-pointer depot-item" onclick="selectDepot(1, this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">Pacific Coast Depot</h5>
+                <span class="badge-status badge-upcoming">Depot</span>
+              </div>
+              <div class="text-muted small mt-2">1840 NW Timberline Blvd, Portland, OR 97209</div>
+              <div class="text-gold small mt-1">Gateway to: Oregon Coast, Olympic Redwoods & Cascades</div>
+            </div>
+
+            <div class="van-card p-3 cursor-pointer depot-item" onclick="selectDepot(2, this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">High Sierra Station</h5>
+                <span class="badge-status badge-upcoming">Depot</span>
+              </div>
+              <div class="text-muted small mt-2">4920 Pioneer Trail, South Lake Tahoe, CA 96150</div>
+              <div class="text-gold small mt-1">Gateway to: Yosemite, Eastern Sierras & Death Valley</div>
+            </div>
+
+            <div class="van-card p-3 cursor-pointer depot-item" onclick="selectDepot(3, this)">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">Red Rock Gateway</h5>
+                <span class="badge-status badge-upcoming">Depot</span>
+              </div>
+              <div class="text-muted small mt-2">550 S Main St, Moab, UT 84532</div>
+              <div class="text-gold small mt-1">Gateway to: Arches, Canyonlands & White Rim Trail</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Simulated Interactive Map Card Display -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="van-card p-4 text-center position-relative overflow-hidden" style="min-height: 440px; background: #121A16; color: #FFFFFF; border: 1px solid var(--border-gold);">
+            
+            <div class="position-absolute top-0 start-0 m-3 d-flex align-items-center gap-2 px-3 py-1.5 rounded-pill" style="background: rgba(24, 37, 31, 0.9); border: 1px solid var(--border-gold);">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold"></i>
+              <span class="small fw-bold" id="map-active-title">Boulder Overland Hub (HQ)</span>
+            </div>
+
+            <div class="d-flex flex-column justify-content-center align-items-center h-100 py-5">
+              <!-- Illustrated Stylized Map SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="100%" height="240" style="max-width: 440px;">
+                <!-- Abstract stylized US map topography & pins -->
+                <path d="M50,80 Q140,50 250,60 T450,100 L440,240 Q300,270 200,240 T60,200 Z" fill="#18251F" stroke="#C49A5A" stroke-width="1.5" stroke-dasharray="3,3" />
+                <!-- Mountain contours -->
+                <path d="M120,90 L140,70 L160,95 L180,65 L210,110" fill="none" stroke="#E2BE82" stroke-width="2" opacity="0.6" />
+                <path d="M220,130 L250,90 L280,140" fill="none" stroke="#E2BE82" stroke-width="2" opacity="0.6" />
+
+                <!-- Connecting route highway lines -->
+                <path d="M110,90 Q180,120 250,110 T380,180" fill="none" stroke="#A66D45" stroke-width="2" stroke-linecap="round" />
+
+                <!-- Pin 1: Boulder (Center Left) -->
+                <g class="depot-pin" id="pin-0" transform="translate(250, 110)">
+                  <circle cx="0" cy="0" r="10" fill="#C49A5A" opacity="0.4" />
+                  <circle cx="0" cy="0" r="5" fill="#E2BE82" />
+                  <text y="18" text-anchor="middle" font-family="'Plus Jakarta Sans'" font-size="10" fill="#FFFFFF" font-weight="700">Boulder (HQ)</text>
+                </g>
+
+                <!-- Pin 2: Portland (Top Left) -->
+                <g class="depot-pin" id="pin-1" transform="translate(100, 75)">
+                  <circle cx="0" cy="0" r="10" fill="#C49A5A" opacity="0.4" />
+                  <circle cx="0" cy="0" r="5" fill="#E2BE82" />
+                  <text y="18" text-anchor="middle" font-family="'Plus Jakarta Sans'" font-size="10" fill="#FFFFFF" font-weight="700">Portland</text>
+                </g>
+
+                <!-- Pin 3: Lake Tahoe (Mid-West) -->
+                <g class="depot-pin" id="pin-2" transform="translate(120, 140)">
+                  <circle cx="0" cy="0" r="10" fill="#C49A5A" opacity="0.4" />
+                  <circle cx="0" cy="0" r="5" fill="#E2BE82" />
+                  <text y="18" text-anchor="middle" font-family="'Plus Jakarta Sans'" font-size="10" fill="#FFFFFF" font-weight="700">Lake Tahoe</text>
+                </g>
+
+                <!-- Pin 4: Moab (Desert) -->
+                <g class="depot-pin" id="pin-3" transform="translate(220, 160)">
+                  <circle cx="0" cy="0" r="10" fill="#C49A5A" opacity="0.4" />
+                  <circle cx="0" cy="0" r="5" fill="#E2BE82" />
+                  <text y="18" text-anchor="middle" font-family="'Plus Jakarta Sans'" font-size="10" fill="#FFFFFF" font-weight="700">Moab</text>
+                </g>
+              </svg>
+
+              <div class="mt-3 p-3 rounded-3 w-100" style="background: rgba(24, 37, 31, 0.8); border: 1px solid var(--border-light);">
+                <div class="row text-start g-2 small">
+                  <div class="col-md-6"><span class="text-muted">Airport Shuttle:</span> <strong class="text-white">Complimentary Denver Int'l (DEN)</strong></div>
+                  <div class="col-md-6"><span class="text-muted">Available Fleet:</span> <strong class="text-gold">All 9 Models Ready</strong></div>
+                  <div class="col-12"><span class="text-muted">Vehicle Orientation:</span> <span class="text-cream">Includes 30-min thorough walkthrough on solar systems, night heaters, and grey-water valves.</span></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Categorized FAQ Section -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about driving requirements, off-grid battery living, cancellation policies, and gear inclusions.
+        </p>
+      </div>
+
+      <div class="max-w-75 mx-auto" style="max-width: 860px;">
+        <div class="accordion" id="vanvoyageFAQAccordion">
+          <!-- Populated dynamically via JavaScript from data.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo.svg" alt="VanVoyage Logo" height="42">
+          </a>
+          <p class="footer-desc">
+            VanVoyage provides premium campervan, 4x4 overland expedition, and luxury RV rentals for travelers who crave authentic wilderness, scenic highways, and outdoor freedom.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="vehicles.html" class="footer-link">Fleet & Vehicles</a></li>
+            <li><a href="destinations.html" class="footer-link">Destinations</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Depots</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Customer Hub</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="login.html" class="footer-link">Account Login</a></li>
+            <li><a href="register.html" class="footer-link">Register Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Customer Dashboard</a></li>
+            <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+            <li><a href="saved-vehicles.html" class="footer-link">Saved Vehicles</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Headquarters & Support</h5>
+          <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>742 Overland Ridge Way, Boulder, CO 80302</span></div>
+          <div class="footer-contact-item"><i data-lucide="phone"></i><span>+1 (800) 584-VOYAGE (24/7 Roadside)</span></div>
+          <div class="footer-contact-item"><i data-lucide="mail"></i><span>adventures@vanvoyage.com</span></div>
+          <div class="footer-contact-item"><i data-lucide="clock"></i><span>Depot Check-in: Mon - Sun (8:00 AM - 6:00 PM)</span></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 VanVoyage Adventure Travel Inc. "Adventure Beyond the Ordinary." All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">Terms of Service</a>
+          <a href="contact.html" class="footer-link">Rental Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/booking.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
+
+      // Render FAQs
+      const faqAccordion = document.getElementById('vanvoyageFAQAccordion');
+      if (faqAccordion) {
+        faqAccordion.innerHTML = window.VANVOYAGE_DATA.faqs.map((faq, i) => `
+          <div class="accordion-item mb-3" style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden;">
+            <h2 class="accordion-header">
+              <button class="accordion-button ${i===0 ? '' : 'collapsed'} fw-bold text-main" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-${i}" style="background: var(--bg-surface); box-shadow: none;">
+                <span class="text-gold me-2">Q.</span> ${faq.question}
+              </button>
+            </h2>
+            <div id="faq-collapse-${i}" class="accordion-collapse collapse ${i===0 ? 'show' : ''}" data-bs-parent="#vanvoyageFAQAccordion">
+              <div class="accordion-body text-muted small" style="line-height: 1.7; background: var(--bg-muted);">
+                ${faq.answer}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      initLucide();
+    });
+
+    function selectDepot(index, element) {
+      document.querySelectorAll('#depots-accordion .depot-item').forEach(item => {
+        item.classList.remove('active');
+        item.style.borderLeft = 'none';
+      });
+      element.classList.add('active');
+      element.style.borderLeft = '4px solid var(--color-gold)';
+
+      const depots = [
+        "Boulder Overland Hub (HQ) – Boulder, CO",
+        "Pacific Coast Depot – Portland, OR",
+        "High Sierra Station – Lake Tahoe, CA",
+        "Red Rock Gateway – Moab, UT"
+      ];
+      document.getElementById('map-active-title').innerText = depots[index];
+
+      // Highlight active pin
+      document.querySelectorAll('.depot-pin circle:first-child').forEach(c => c.setAttribute('r', '10'));
+      const activePin = document.getElementById(`pin-${index}`);
+      if (activePin) {
+        activePin.querySelector('circle:first-child').setAttribute('r', '16');
+      }
+
+      showToast(`Selected depot: ${depots[index]}`, 'map-pin');
+    }
+
+    function handleEnquirySubmit(form) {
+      showToast("Enquiry sent successfully! A route concierge will contact you shortly.", "check-circle");
+      form.reset();
+    }
+  </script>
+</body>
+</html>

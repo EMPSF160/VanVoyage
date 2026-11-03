@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2BE82" />
+      <stop offset="50%" stop-color="#C49A5A" />
+      <stop offset="100%" stop-color="#A66D45" />
+    </linearGradient>
+    <linearGradient id="logoForest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3129" />
+      <stop offset="100%" stop-color="#111B17" />
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem Mark (Left) -->
+  <g transform="translate(6, 6)">
+    <!-- Shield / Badge outline -->
+    <path d="M24,2 L44,10 L44,30 C44,40 24,47 24,47 C24,47 4,40 4,30 L4,10 Z" fill="url(#logoForest)" stroke="url(#logoGold)" stroke-width="2" />
+    
+    <!-- Mountain Peaks -->
+    <polygon points="10,34 20,18 27,28 34,14 40,34" fill="#141E19" stroke="#C49A5A" stroke-width="1.2" stroke-linejoin="round" />
+    <polygon points="20,18 23,23 18,23" fill="#E9E3D5" opacity="0.9" />
+    <polygon points="34,14 37,20 31,20" fill="#E9E3D5" opacity="0.9" />
+    
+    <!-- Compass 4-point star on peak -->
+    <polygon points="24,6 26,11 30,12 26,13 24,18 22,13 18,12 22,11" fill="url(#logoGold)" />
+    
+    <!-- Van Silhouette & Road -->
+    <path d="M8,38 Q24,34 40,38" fill="none" stroke="url(#logoGold)" stroke-width="2" stroke-linecap="round" />
+    <circle cx="17" cy="38" r="2.2" fill="#343A36" stroke="#C49A5A" stroke-width="0.8" />
+    <circle cx="31" cy="38" r="2.2" fill="#343A36" stroke="#C49A5A" stroke-width="0.8" />
+  </g>
+
+  <!-- Typographic Wordmark (Right) -->
+  <g transform="translate(66, 32)">
+    <!-- Brand Title -->
+    <text font-family="'Plus Jakarta Sans', 'Outfit', sans-serif" font-weight="900" font-size="22" letter-spacing="4" fill="currentColor" class="brand-name">
+      <tspan fill="#C49A5A">VAN</tspan><tspan class="brand-text-accent">VOYAGE</tspan>
+    </text>
+    
+    <!-- Subtitle -->
+    <text y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.8" fill="#A66D45" class="brand-tagline">
+      ADVENTURE TRAVEL • CAMPERVAN • OVERLANDING
+    </text>
+  </g>
+</svg>

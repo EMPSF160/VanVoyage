@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Settings | VanVoyage</title>
+  <meta name="description" content="Manage your VanVoyage security credentials, notification preferences, saved payment methods, and theme options.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Master Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    
+    <!-- DASHBOARD SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <div class="dashboard-sidebar-header">
+        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <img src="assets/images/favicon.svg" alt="VanVoyage Logo" width="36" height="36">
+          <span class="font-heading fw-bold text-gold fs-5 tracking-wide">VANVOYAGE</span>
+        </a>
+        <button class="btn btn-sm d-lg-none text-muted" onclick="toggleSidebar()"><i data-lucide="x"></i></button>
+      </div>
+
+      <div class="sidebar-user-card">
+        <img id="sidebarUserAvatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Avatar" class="sidebar-user-avatar">
+        <div class="overflow-hidden">
+          <div class="sidebar-user-name text-truncate" id="sidebarUserName">Alex Rivers</div>
+          <div class="sidebar-user-tier" id="sidebarUserTier">Explorer Elite Member</div>
+        </div>
+      </div>
+
+      <nav class="dashboard-nav-list">
+        <a href="dashboard.html" class="sidebar-nav-item">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Overview</span>
+        </a>
+        <a href="bookings.html" class="sidebar-nav-item">
+          <i data-lucide="calendar"></i>
+          <span>My Bookings</span>
+        </a>
+        <a href="bookings.html?filter=upcoming" class="sidebar-nav-item">
+          <i data-lucide="compass"></i>
+          <span>Upcoming Trips</span>
+        </a>
+        <a href="bookings.html?filter=completed" class="sidebar-nav-item">
+          <i data-lucide="history"></i>
+          <span>Booking History</span>
+        </a>
+        <a href="saved-vehicles.html" class="sidebar-nav-item">
+          <i data-lucide="heart"></i>
+          <span>Saved Vehicles</span>
+          <span class="badge bg-warning text-dark ms-auto rounded-pill px-2" id="saved-vehicles-count">2</span>
+        </a>
+        <a href="profile.html" class="sidebar-nav-item">
+          <i data-lucide="user"></i>
+          <span>My Profile</span>
+        </a>
+        <a href="settings.html" class="sidebar-nav-item active">
+          <i data-lucide="settings"></i>
+          <span>Account Settings</span>
+        </a>
+      </nav>
+
+      <div class="dashboard-sidebar-footer">
+        <a href="index.html" class="sidebar-nav-item text-muted">
+          <i data-lucide="globe"></i>
+          <span>Back to Main Site</span>
+        </a>
+        <button onclick="Auth.logout()" class="sidebar-nav-item text-danger border-0 bg-transparent text-start w-100">
+          <i data-lucide="log-out"></i>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- DASHBOARD MAIN -->
+    <main class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm text-main d-lg-none p-1" onclick="toggleSidebar()">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+          <h1 class="dashboard-page-title">Account & Security Settings</h1>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <button class="theme-toggle-btn" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+        </div>
+      </header>
+
+      <div class="dashboard-content-body">
+        
+        <div class="row g-4">
+          
+          <div class="col-lg-6">
+            <!-- Security & Password -->
+            <div class="van-card p-4 mb-4">
+              <h4 class="fw-bold font-heading mb-1">Security & Password</h4>
+              <p class="text-muted small mb-3">Ensure your account is protected with a robust password.</p>
+
+              <form onsubmit="event.preventDefault(); handlePasswordChange();">
+                <div class="mb-3">
+                  <label class="form-label-custom">Current Password</label>
+                  <input type="password" class="form-control-custom" id="currPass" placeholder="••••••••" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-custom">New Password</label>
+                  <input type="password" class="form-control-custom" id="newPass" placeholder="Minimum 6 characters" minlength="6" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label-custom">Confirm New Password</label>
+                  <input type="password" class="form-control-custom" id="confirmNewPass" placeholder="Repeat new password" minlength="6" required>
+                </div>
+                <button type="submit" class="btn-forest btn-sm-custom">
+                  <span>Update Password</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Appearance & Theme Preferences -->
+            <div class="van-card p-4">
+              <h4 class="fw-bold font-heading mb-1">Theme & Interface</h4>
+              <p class="text-muted small mb-3">Choose your visual aesthetic across all VanVoyage pages.</p>
+
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="p-3 rounded-3 text-center cursor-pointer theme-select-box" id="themeSelectDark" onclick="applyThemeAndSave('dark')" style="border: 2px solid var(--border-gold); background: #18251F; color: #FFFFFF;">
+                    <i data-lucide="moon" class="w-6 h-6 text-gold mb-2 mx-auto"></i>
+                    <div class="fw-bold small">Deep Forest (Dark)</div>
+                    <div class="text-muted" style="font-size: 0.7rem;">Night wilderness theme</div>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="p-3 rounded-3 text-center cursor-pointer theme-select-box" id="themeSelectLight" onclick="applyThemeAndSave('light')" style="border: 1px solid var(--border-medium); background: #FAF7F2; color: #18251F;">
+                    <i data-lucide="sun" class="w-6 h-6 text-warning mb-2 mx-auto"></i>
+                    <div class="fw-bold small">Warm Linen (Light)</div>
+                    <div class="text-muted" style="font-size: 0.7rem;">Daylight travel editorial</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            
+            <!-- Notification Preferences -->
+            <div class="van-card p-4 mb-4">
+              <h4 class="fw-bold font-heading mb-1">Notification Preferences</h4>
+              <p class="text-muted small mb-3">Control what alerts we send to your phone and email.</p>
+
+              <div class="d-flex flex-column gap-3">
+                <div class="d-flex justify-content-between align-items-center p-2 rounded-2" style="background: var(--bg-muted);">
+                  <div>
+                    <div class="fw-bold small text-main">Trip & Check-in Reminders</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Receive gate codes and check-in instructions 48h prior.</div>
+                  </div>
+                  <div class="form-check form-switch mb-0">
+                    <input class="form-check-input" type="checkbox" checked style="cursor: pointer; accent-color: var(--color-gold);">
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center p-2 rounded-2" style="background: var(--bg-muted);">
+                  <div>
+                    <div class="fw-bold small text-main">Wilderness Weather & Trail Alerts</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Live SMS alerts on mountain pass snow and trail closures.</div>
+                  </div>
+                  <div class="form-check form-switch mb-0">
+                    <input class="form-check-input" type="checkbox" checked style="cursor: pointer; accent-color: var(--color-gold);">
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center p-2 rounded-2" style="background: var(--bg-muted);">
+                  <div>
+                    <div class="fw-bold small text-main">Backcountry Dispatch & Promos</div>
+                    <div class="text-muted" style="font-size: 0.75rem;">Secret BLM camping spots and member rate promotions.</div>
+                  </div>
+                  <div class="form-check form-switch mb-0">
+                    <input class="form-check-input" type="checkbox" checked style="cursor: pointer; accent-color: var(--color-gold);">
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn-forest btn-sm-custom mt-3" onclick="showToast('Notification preferences saved!', 'check')">
+                <span>Save Notifications</span>
+              </button>
+            </div>
+
+            <!-- Saved Payment Methods -->
+            <div class="van-card p-4 mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold font-heading mb-0">Payment Methods</h4>
+                <button type="button" class="btn-outline-gold btn-sm-custom" onclick="showToast('Add Payment Card modal opened', 'credit-card')">
+                  <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                  <span>Add Card</span>
+                </button>
+              </div>
+
+              <!-- Card Visual -->
+              <div class="p-3 rounded-3 text-white mb-3" style="background: linear-gradient(135deg, #18251F 0%, #343A36 100%); border: 1px solid var(--border-gold);">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-gold fw-bold tracking-widest font-heading">VANVOYAGE EXPEDITION CARD</span>
+                  <span class="badge bg-warning text-dark px-2 rounded-pill small">Default</span>
+                </div>
+                <div class="fs-5 tracking-widest font-monospace mb-2">•••• •••• •••• 4921</div>
+                <div class="d-flex justify-content-between small text-cream" style="color: var(--color-cream);">
+                  <div>CARDHOLDER: ALEX RIVERS</div>
+                  <div>EXPIRES: 09/29</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="van-card p-4 border border-danger-subtle">
+              <h5 class="fw-bold text-danger mb-1">Danger Zone</h5>
+              <p class="text-muted small mb-3">Reset demo data back to factory seeds or clear session state.</p>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-outline-danger btn-sm-custom" onclick="resetDemoData()">
+                  <span>Reset Demo LocalStorage</span>
+                </button>
+                <button type="button" class="btn btn-danger btn-sm-custom" onclick="Auth.logout()">
+                  <span>Log Out Everywhere</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/booking.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      Auth.requireAuth();
+
+      const user = Auth.getUser();
+      if (user) {
+        document.getElementById('sidebarUserName').innerText = user.name;
+        if (user.avatar) document.getElementById('sidebarUserAvatar').src = user.avatar;
+      }
+
+      updateThemeBoxes();
+      initLucide();
+    });
+
+    function toggleSidebar() {
+      document.getElementById('dashboardSidebar').classList.toggle('show');
+    }
+
+    function applyThemeAndSave(theme) {
+      applyTheme(theme);
+      updateThemeBoxes();
+      showToast(`Interface switched to ${theme.toUpperCase()} mode`, 'sun');
+    }
+
+    function updateThemeBoxes() {
+      const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+      const darkBox = document.getElementById('themeSelectDark');
+      const lightBox = document.getElementById('themeSelectLight');
+
+      if (cur === 'dark') {
+        darkBox.style.borderColor = 'var(--color-gold)';
+        darkBox.style.boxShadow = '0 0 15px rgba(196, 154, 90, 0.3)';
+        lightBox.style.borderColor = 'var(--border-medium)';
+        lightBox.style.boxShadow = 'none';
+      } else {
+        lightBox.style.borderColor = 'var(--color-gold)';
+        lightBox.style.boxShadow = '0 0 15px rgba(196, 154, 90, 0.3)';
+        darkBox.style.borderColor = 'var(--border-medium)';
+        darkBox.style.boxShadow = 'none';
+      }
+    }
+
+    function handlePasswordChange() {
+      const nPass = document.getElementById('newPass').value;
+      const cPass = document.getElementById('confirmNewPass').value;
+
+      if (nPass !== cPass) {
+        showToast('New passwords do not match', 'alert-triangle');
+        return;
+      }
+
+      showToast('Password updated securely!', 'check-circle');
+      document.getElementById('currPass').value = '';
+      document.getElementById('newPass').value = '';
+      document.getElementById('confirmNewPass').value = '';
+    }
+
+    function resetDemoData() {
+      if (confirm('Reset demo state to default seed data?')) {
+        localStorage.removeItem('vanvoyage_bookings');
+        localStorage.removeItem('vanvoyage_saved_vehicles');
+        showToast('Demo data successfully refreshed!', 'check');
+        setTimeout(() => window.location.reload(), 1000);
+      }
+    }
+  </script>
+</body>
+</html>

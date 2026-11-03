@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | VanVoyage – Adventure Beyond the Ordinary</title>
+  <meta name="description" content="Discover the VanVoyage story, our backcountry travel philosophy, fleet engineering, and the passionate team powering your overlanding expeditions.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Scroll Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN HEADER & NAVIGATION
+       At <=1024px: Shows ONLY Logo & Hamburger on the same row.
+       ========================================================================== -->
+  <header class="main-header header-hero-transparent">
+    <div class="container-fluid px-lg-5">
+      <div class="nav-container">
+        
+        <!-- VanVoyage Logo -->
+        <a href="index.html" class="brand-logo-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="220" height="48">
+            <defs>
+              <linearGradient id="navLogoGoldAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E2BE82" />
+                <stop offset="50%" stop-color="#C49A5A" />
+                <stop offset="100%" stop-color="#A66D45" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(6, 6)">
+              <path d="M24,2 L44,10 L44,30 C44,40 24,47 24,47 C24,47 4,40 4,30 L4,10 Z" fill="#18251F" stroke="url(#navLogoGoldAbout)" stroke-width="2" />
+              <polygon points="10,34 20,18 27,28 34,14 40,34" fill="#141E19" stroke="#C49A5A" stroke-width="1.2" stroke-linejoin="round" />
+              <polygon points="20,18 23,23 18,23" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="34,14 37,20 31,20" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="24,6 26,11 30,12 26,13 24,18 22,13 18,12 22,11" fill="url(#navLogoGoldAbout)" />
+              <path d="M8,38 Q24,34 40,38" fill="none" stroke="url(#navLogoGoldAbout)" stroke-width="2" stroke-linecap="round" />
+            </g>
+            <g transform="translate(62, 32)">
+              <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="21" letter-spacing="3.5" fill="currentColor">
+                <tspan fill="#C49A5A">VAN</tspan><tspan fill="#E9E3D5">VOYAGE</tspan>
+              </text>
+              <text y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#E2BE82">
+                ADVENTURE TRAVEL • CAMPERVAN
+              </text>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Menu (> 1024px) -->
+        <ul class="nav-menu-desktop list-unstyled">
+          <li><a href="index.html" class="nav-link-custom">Home</a></li>
+          <li><a href="about.html" class="nav-link-custom active">About Us</a></li>
+          <li><a href="vehicles.html" class="nav-link-custom">Vehicles</a></li>
+          <li><a href="destinations.html" class="nav-link-custom">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+
+        <!-- Desktop Actions & Theme Toggle (> 1024px) -->
+        <div class="nav-actions-desktop">
+          <button class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+          
+          <div class="nav-auth-slot d-flex align-items-center gap-2">
+            <a href="login.html" class="btn-outline-light btn-sm-custom">Login</a>
+            <a href="register.html" class="btn-gold btn-sm-custom">Register</a>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Button (<= 1024px) -->
+        <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav" aria-controls="mobileOffcanvasNav" aria-label="Open Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-mobile-menu" tabindex="-1" id="mobileOffcanvasNav">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/favicon.svg" alt="VanVoyage Emblem" width="32" height="32">
+        <span class="font-heading fw-bold text-gold" style="font-size: 1.2rem;">VANVOYAGE</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link"><span>Home</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="about.html" class="mobile-nav-link active"><span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="vehicles.html" class="mobile-nav-link"><span>Vehicles</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="destinations.html" class="mobile-nav-link"><span>Destinations</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="contact.html" class="mobile-nav-link"><span>Contact</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <div class="px-4 py-2">
+          <div class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 8px;">Customer Portal</div>
+          <a href="dashboard.html" class="mobile-nav-link py-2 px-0"><span>Customer Dashboard</span><i data-lucide="layout-dashboard" class="w-4 h-4 text-gold"></i></a>
+          <a href="saved-vehicles.html" class="mobile-nav-link py-2 px-0"><span>Saved Vehicles</span><i data-lucide="heart" class="w-4 h-4 text-gold"></i></a>
+        </div>
+      </div>
+      <div class="mobile-nav-footer">
+        <div class="d-flex align-items-center justify-content-between mb-3 p-2 rounded" style="background: var(--bg-muted);">
+          <span style="font-size: 0.875rem; font-weight: 600;">Theme Mode</span>
+          <button class="theme-toggle-btn" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+        </div>
+        <div class="mobile-auth-slot">
+          <a href="login.html" class="btn-outline-gold w-100 mb-2">Login to Account</a>
+          <a href="register.html" class="btn-gold w-100">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content" data-aos="fade-up">
+      <div class="eyebrow-badge">
+        <i data-lucide="mountain" class="w-4 h-4"></i>
+        <span>Our Origins & Purpose</span>
+      </div>
+      <h1 class="display-3 font-heading fw-bold text-white mb-3">
+        Built By Backcountry Explorers, <br>
+        <span class="text-gold font-serif fst-italic">For Modern Adventurers.</span>
+      </h1>
+      <p class="lead text-cream mx-auto" style="max-width: 680px; color: var(--color-cream);">
+        We started VanVoyage with one singular conviction: that the best moments in life happen down dirt roads where hotel chains and Wi-Fi cannot follow.
+      </p>
+    </div>
+  </section>
+
+  <!-- Brand Story & Mission Section -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-tag">Brand Story</span>
+          <h2 class="section-title">The VanVoyage Odyssey</h2>
+          <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+            In 2021, our founders were frustrated by the car and RV rental industry. Standard car rentals fined you if you touched a gravel road. Legacy motorhomes were loud, lumbering fiberglass boxes tethered to electrical hookups in crowded RV parks.
+          </p>
+          <p class="text-muted" style="font-size: 1.05rem; line-height: 1.8;">
+            We set out to engineer something radically different: a premium fleet of expedition-grade campervans and custom 4x4 Sprinters with high-capacity lithium iron phosphate batteries, hydronic night heaters, hot outdoor showers, and all-terrain tires. Rigs capable of traversing high alpine passes, yet refined enough to feel like a five-star Scandinavian cabin on wheels.
+          </p>
+          <div class="p-3 rounded-3 mt-4" style="background: var(--color-gold-soft); border-left: 4px solid var(--color-gold);">
+            <div class="fw-bold text-gold mb-1">Our Mission</div>
+            <div style="font-size: 0.95rem; color: var(--text-main);">
+              To make remote overland freedom effortless, safe, and sustainable — unlocking North America’s wildest landscapes for discerning travelers.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="row g-3">
+            <div class="col-6">
+              <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?auto=format&fit=crop&w=800&q=80" alt="4x4 Sprinter on Mountain Pass" class="rounded-4 shadow-sm w-100" style="aspect-ratio: 4/5; object-fit: cover;">
+            </div>
+            <div class="col-6 pt-4">
+              <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=800&q=80" alt="Campervan Coffee Morning" class="rounded-4 shadow-sm w-100" style="aspect-ratio: 4/5; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Philosophy & Core Pillars -->
+  <section class="py-5 bg-muted-custom">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">Travel Philosophy</span>
+        <h2 class="section-title">The Four VanVoyage Tenets</h2>
+        <p class="section-subtitle">
+          Every vehicle build, route guide, and customer interaction is guided by our four core pillars.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap mx-auto">
+              <i data-lucide="compass"></i>
+            </div>
+            <h4 class="feature-box-title">True Backcountry</h4>
+            <p class="feature-box-desc">
+              We permit unpaved roads and BLM trails that legacy rental companies ban. Real adventure requires freedom to roam.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap mx-auto">
+              <i data-lucide="sparkles"></i>
+            </div>
+            <h4 class="feature-box-title">Uncompromising Luxury</h4>
+            <p class="feature-box-desc">
+              Ergonomic memory foam beds, organic down duvets, Nespresso coffee, and designer teak finishes come standard.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap mx-auto">
+              <i data-lucide="leaf"></i>
+            </div>
+            <h4 class="feature-box-title">Leave No Trace</h4>
+            <p class="feature-box-desc">
+              100% of rental carbon emissions offset, greywater storage in every rig, and biodegradable camp soaps provided.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-box text-center">
+            <div class="feature-icon-wrap mx-auto">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <h4 class="feature-box-title">Relentless Safety</h4>
+            <p class="feature-box-desc">
+              24/7 wilderness satellite emergency dispatch, MaxTrax recovery boards, and comprehensive commercial insurance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">The Crew Behind Your Trip</span>
+        <h2 class="section-title">Meet Our Expedition Leaders</h2>
+        <p class="section-subtitle">
+          Overland fabricators, wilderness navigators, and hospitality veterans dedicated to creating your ultimate road trip.
+        </p>
+      </div>
+
+      <div class="row g-4" id="team-grid">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact & Numbers Counter -->
+  <section class="py-5" style="background-color: var(--color-forest); color: #FFFFFF;">
+    <div class="container py-lg-4">
+      <div class="row text-center g-4">
+        <div class="col-lg-3 col-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="font-heading fw-bold text-gold" style="font-size: 3rem; line-height: 1;">4,500+</div>
+          <div class="text-cream text-uppercase mt-2" style="font-size: 0.8125rem; letter-spacing: 1px;">Expeditions Completed</div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="font-heading fw-bold text-gold" style="font-size: 3rem; line-height: 1;">100%</div>
+          <div class="text-cream text-uppercase mt-2" style="font-size: 0.8125rem; letter-spacing: 1px;">Solar Powered Living</div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="font-heading fw-bold text-gold" style="font-size: 3rem; line-height: 1;">4 Depots</div>
+          <div class="text-cream text-uppercase mt-2" style="font-size: 0.8125rem; letter-spacing: 1px;">Boulder • Tahoe • Portland • Moab</div>
+        </div>
+        <div class="col-lg-3 col-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="font-heading fw-bold text-gold" style="font-size: 3rem; line-height: 1;">4.97 ★</div>
+          <div class="text-cream text-uppercase mt-2" style="font-size: 0.8125rem; letter-spacing: 1px;">Verified Guest Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container">
+      <div class="cta-banner text-center" data-aos="zoom-in">
+        <span class="eyebrow-badge"><i data-lucide="compass" class="w-4 h-4"></i><span>Your Next Chapter Awaits</span></span>
+        <h2 class="font-heading fw-bold text-white mb-3" style="font-size: clamp(2rem, 3.5vw, 2.75rem);">
+          Ready To Experience The Road Less Traveled?
+        </h2>
+        <p class="mx-auto text-cream mb-4" style="max-width: 600px; color: var(--color-cream);">
+          Browse our fleet of custom 4x4 Sprinters, California pop-top campers, and luxury motorhomes today.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="vehicles.html" class="btn-gold">Explore The Fleet</a>
+          <a href="contact.html" class="btn-outline-light">Speak With Route Concierge</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo.svg" alt="VanVoyage Logo" height="42">
+          </a>
+          <p class="footer-desc">
+            VanVoyage provides premium campervan, 4x4 overland expedition, and luxury RV rentals for travelers who crave authentic wilderness, scenic highways, and outdoor freedom.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="vehicles.html" class="footer-link">Fleet & Vehicles</a></li>
+            <li><a href="destinations.html" class="footer-link">Destinations</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Depots</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Customer Hub</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="login.html" class="footer-link">Account Login</a></li>
+            <li><a href="register.html" class="footer-link">Register Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Customer Dashboard</a></li>
+            <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+            <li><a href="saved-vehicles.html" class="footer-link">Saved Vehicles</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Headquarters & Support</h5>
+          <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>742 Overland Ridge Way, Boulder, CO 80302</span></div>
+          <div class="footer-contact-item"><i data-lucide="phone"></i><span>+1 (800) 584-VOYAGE (24/7 Roadside)</span></div>
+          <div class="footer-contact-item"><i data-lucide="mail"></i><span>adventures@vanvoyage.com</span></div>
+          <div class="footer-contact-item"><i data-lucide="clock"></i><span>Depot Check-in: Mon - Sun (8:00 AM - 6:00 PM)</span></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 VanVoyage Adventure Travel Inc. "Adventure Beyond the Ordinary." All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">Terms of Service</a>
+          <a href="contact.html" class="footer-link">Rental Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/booking.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
+
+      // Render Team Members
+      const teamGrid = document.getElementById('team-grid');
+      if (teamGrid) {
+        teamGrid.innerHTML = window.VANVOYAGE_DATA.team.map(m => `
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up">
+            <div class="van-card text-center p-3">
+              <img src="${m.image}" alt="${m.name}" class="rounded-circle mx-auto mb-3" style="width: 110px; height: 110px; object-fit: cover; border: 2px solid var(--color-gold);">
+              <h5 class="fw-bold mb-1">${m.name}</h5>
+              <div class="text-gold small fw-semibold mb-2">${m.role}</div>
+              <p class="text-muted small mb-0">${m.bio}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      initLucide();
+    });
+  </script>
+</body>
+</html>

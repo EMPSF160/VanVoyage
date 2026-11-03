@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VanVoyage | Adventure Beyond the Ordinary – Campervan, RV & Overlanding</title>
+  <meta name="description" content="Premium campervan, 4x4 overlanding rigs, and luxury RV rentals for unforgettable backcountry expeditions. Adventure beyond the ordinary.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- AOS Scroll Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN HEADER & NAVIGATION
+       At <=1024px: Shows ONLY Logo & Hamburger on the same row.
+       ========================================================================== -->
+  <header class="main-header header-hero-transparent">
+    <div class="container-fluid px-lg-5">
+      <div class="nav-container">
+        
+        <!-- VanVoyage Logo -->
+        <a href="index.html" class="brand-logo-wrap" id="header-brand-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="220" height="48">
+            <defs>
+              <linearGradient id="navLogoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E2BE82" />
+                <stop offset="50%" stop-color="#C49A5A" />
+                <stop offset="100%" stop-color="#A66D45" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(6, 6)">
+              <path d="M24,2 L44,10 L44,30 C44,40 24,47 24,47 C24,47 4,40 4,30 L4,10 Z" fill="#18251F" stroke="url(#navLogoGold)" stroke-width="2" />
+              <polygon points="10,34 20,18 27,28 34,14 40,34" fill="#141E19" stroke="#C49A5A" stroke-width="1.2" stroke-linejoin="round" />
+              <polygon points="20,18 23,23 18,23" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="34,14 37,20 31,20" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="24,6 26,11 30,12 26,13 24,18 22,13 18,12 22,11" fill="url(#navLogoGold)" />
+              <path d="M8,38 Q24,34 40,38" fill="none" stroke="url(#navLogoGold)" stroke-width="2" stroke-linecap="round" />
+            </g>
+            <g transform="translate(62, 32)">
+              <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="21" letter-spacing="3.5" fill="currentColor">
+                <tspan fill="#C49A5A">VAN</tspan><tspan fill="#E9E3D5">VOYAGE</tspan>
+              </text>
+              <text y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#E2BE82">
+                ADVENTURE TRAVEL • CAMPERVAN
+              </text>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Menu (> 1024px) -->
+        <ul class="nav-menu-desktop list-unstyled">
+          <li><a href="index.html" class="nav-link-custom active">Home</a></li>
+          <li><a href="about.html" class="nav-link-custom">About Us</a></li>
+          <li><a href="vehicles.html" class="nav-link-custom">Vehicles</a></li>
+          <li><a href="destinations.html" class="nav-link-custom">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+
+        <!-- Desktop Actions & Theme Toggle (> 1024px) -->
+        <div class="nav-actions-desktop">
+          <!-- Theme Switcher -->
+          <button class="theme-toggle-btn" id="theme-btn-desktop" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+          
+          <!-- Auth Slot (Login/Register or Dashboard if logged in) -->
+          <div class="nav-auth-slot d-flex align-items-center gap-2">
+            <a href="login.html" class="btn-outline-light btn-sm-custom">Login</a>
+            <a href="register.html" class="btn-gold btn-sm-custom">Register</a>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Button (<= 1024px, 768px, 360px: ONLY Logo and Hamburger) -->
+        <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav" aria-controls="mobileOffcanvasNav" aria-label="Open Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE / TABLET OFFCANVAS DRAWER (<= 1024px)
+       Holds all navigation links, theme switcher, dashboard, and login/register
+       ========================================================================== -->
+  <div class="offcanvas offcanvas-end offcanvas-mobile-menu" tabindex="-1" id="mobileOffcanvasNav" aria-labelledby="mobileOffcanvasNavLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/favicon.svg" alt="VanVoyage Emblem" width="32" height="32">
+        <span class="font-heading fw-bold text-gold" style="font-size: 1.2rem; letter-spacing: 1px;">VANVOYAGE</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active">
+          <span>Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+          <span>About Us</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="vehicles.html" class="mobile-nav-link">
+          <span>Vehicles</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="destinations.html" class="mobile-nav-link">
+          <span>Destinations</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="contact.html" class="mobile-nav-link">
+          <span>Contact</span>
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        
+        <div class="px-4 py-2">
+          <div class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 8px;">Customer Portal</div>
+          <a href="dashboard.html" class="mobile-nav-link py-2 px-0">
+            <span>Customer Dashboard</span>
+            <i data-lucide="layout-dashboard" class="w-4 h-4 text-gold"></i>
+          </a>
+          <a href="saved-vehicles.html" class="mobile-nav-link py-2 px-0">
+            <span>Saved Vehicles</span>
+            <i data-lucide="heart" class="w-4 h-4 text-gold"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-footer">
+        <!-- Theme Toggle Row -->
+        <div class="d-flex align-items-center justify-content-between mb-3 p-2 rounded" style="background: var(--bg-muted);">
+          <span style="font-size: 0.875rem; font-weight: 600;">Theme Mode</span>
+          <button class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+        </div>
+
+        <!-- Auth Slot for Mobile -->
+        <div class="mobile-auth-slot">
+          <a href="login.html" class="btn-outline-gold w-100 mb-2">Login to Account</a>
+          <a href="register.html" class="btn-gold w-100">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CINEMATIC HERO SECTION
+       Headline: Adventure Beyond the Ordinary.
+       ========================================================================== -->
+  <section class="hero-section">
+    <!-- Background Ken-Burns Slider -->
+    <div class="hero-bg-slider">
+      <div class="hero-bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1527786356703-4b100091cd2c?auto=format&fit=crop&w=1920&q=85');"></div>
+      <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1920&q=85');"></div>
+      <div class="hero-bg-slide" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=85');"></div>
+    </div>
+    
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-header-anim">
+        <div class="eyebrow-badge">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>Curated Overland & RV Expeditions</span>
+        </div>
+        
+        <h1 class="hero-headline">
+          Adventure Beyond <br>
+          <span class="text-gold font-serif fst-italic">the Ordinary.</span>
+        </h1>
+
+        <p class="hero-subhead">
+          Turnkey Mercedes 4x4 Sprinters, iconic California pop-top campervans, and bespoke luxury motorhomes engineered for remote backcountry freedom.
+        </p>
+      </div>
+
+      <!-- Hero Vehicle Search & Booking Bar -->
+      <div class="hero-search-box hero-search-anim">
+        <form id="hero-search-form" onsubmit="event.preventDefault(); handleHeroSearch();">
+          <div class="row g-3 align-items-end">
+            
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="search-field-group">
+                <label class="search-field-label">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                  <span>Depot Hub</span>
+                </label>
+                <select class="search-field-select" id="hero-search-depot" required>
+                  <option value="Boulder Overland Hub (HQ)">Boulder, CO (HQ)</option>
+                  <option value="Pacific Coast Depot">Portland, OR</option>
+                  <option value="High Sierra Station">Lake Tahoe, CA</option>
+                  <option value="Red Rock Gateway">Moab, UT</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="search-field-group">
+                <label class="search-field-label">
+                  <i data-lucide="truck" class="w-3.5 h-3.5"></i>
+                  <span>Vehicle Category</span>
+                </label>
+                <select class="search-field-select" id="hero-search-category">
+                  <option value="all">All Fleet Classes</option>
+                  <option value="overland">4x4 Overlanding</option>
+                  <option value="campervan">Agile Campervans</option>
+                  <option value="luxury-rv">Luxury Motorhomes</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-6">
+              <div class="search-field-group">
+                <label class="search-field-label">
+                  <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                  <span>Pickup</span>
+                </label>
+                <input type="date" class="search-field-input" id="hero-search-pickup" required>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-6">
+              <div class="search-field-group">
+                <label class="search-field-label">
+                  <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                  <span>Return</span>
+                </label>
+                <input type="date" class="search-field-input" id="hero-search-return" required>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-12 col-12">
+              <button type="submit" class="btn-gold w-100 py-2.5">
+                <i data-lucide="search" class="w-4 h-4"></i>
+                <span>Explore Fleet</span>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- Quick Trust Stats -->
+      <div class="hero-stats-row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-lbl">Expedition Depots</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-lbl">Solar & Off-Grid</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">45k+</div>
+          <div class="hero-stat-lbl">Backcountry Miles</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">4.97<span style="font-size: 1.2rem; color: var(--color-gold);">★</span></div>
+          <div class="hero-stat-lbl">Road Tripper Rating</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED RVs & CAMPERVANS
+       ========================================================================== -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-8" data-aos="fade-right">
+          <span class="section-tag">Purpose-Built Backcountry Fleet</span>
+          <h2 class="section-title">Engineered For The Untamed Wild</h2>
+          <p class="text-muted mb-0" style="max-width: 600px;">
+            Every vehicle in our fleet is custom outfitted with lithium auxiliary power, hot outdoor showers, all-terrain tires, and all kitchen essentials.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
+          <a href="vehicles.html" class="btn-forest">
+            <span>View All 9 Vehicles</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured Vehicles Grid -->
+      <div class="row g-4" id="featured-vehicles-grid">
+        <!-- Rendered dynamically via JavaScript from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       POPULAR DESTINATIONS SHOWCASE
+       ========================================================================== -->
+  <section class="py-5 bg-muted-custom">
+    <div class="container py-lg-4">
+      
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">Epic Road Trip Routes</span>
+        <h2 class="section-title">Where Will Your Compass Point?</h2>
+        <p class="section-subtitle">
+          Hand-scouted routes designed specifically for high-clearance campervans and overlanding rigs. From alpine switchbacks to secluded coastal coves.
+        </p>
+      </div>
+
+      <div class="row g-4" id="featured-destinations-grid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="destinations.html" class="btn-outline-gold">
+          <i data-lucide="map" class="w-4 h-4"></i>
+          <span>Explore All 6 Interactive Itineraries</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHY TRAVEL WITH VANVOYAGE
+       ========================================================================== -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">The VanVoyage Advantage</span>
+        <h2 class="section-title">Why Travel Beyond The Ordinary?</h2>
+        <p class="section-subtitle">
+          We bridge the gap between rugged off-road exploration and boutique luxury hospitality.
+        </p>
+      </div>
+
+      <div class="row g-4" id="why-choose-grid">
+        <!-- Populated via data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ADVENTURE EXPERIENCES SECTION (EDITORIAL SHOWCASE)
+       ========================================================================== -->
+  <section class="py-5" style="background-color: var(--color-forest); color: #FFFFFF;">
+    <div class="container py-lg-4">
+      
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="eyebrow-badge" style="background: rgba(196, 154, 90, 0.15); border-color: var(--color-gold);">
+            <i data-lucide="flame" class="w-4 h-4 text-gold"></i>
+            <span class="text-gold">Complete Backcountry Autonomy</span>
+          </div>
+          <h2 class="font-heading fw-bold mb-4" style="font-size: clamp(2rem, 3.5vw, 2.85rem); line-height: 1.2;">
+            Camp Where Traditional RVs Can Never Reach.
+          </h2>
+          <p style="color: var(--color-cream); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            Standard RV rentals restrict you to paved campgrounds and loud generator parks. VanVoyage vehicles are built for Bureau of Land Management (BLM) trails, high mountain passes, and off-grid crown land.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="stat-icon-square" style="width: 40px; height: 40px; flex-shrink: 0;">
+                <i data-lucide="sun" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1 text-white">400W+ Solar & Lithium LiFePO4</h6>
+                <p class="small text-muted mb-0" style="color: #A3B1A8 !important;">Silent power to keep your induction cooktop, Dometic fridge, and phones charged without noisy generators.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="stat-icon-square" style="width: 40px; height: 40px; flex-shrink: 0;">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1 text-white">Full Backcountry Insurance & Permits</h6>
+                <p class="small text-muted mb-0" style="color: #A3B1A8 !important;">Legally authorized on unpaved gravel roads with 24/7 satellite emergency dispatch included.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="stat-icon-square" style="width: 40px; height: 40px; flex-shrink: 0;">
+                <i data-lucide="coffee" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1 text-white">Turnkey Chef Kitchen & Down Linens</h6>
+                <p class="small text-muted mb-0" style="color: #A3B1A8 !important;">French press coffee, Yeti cooler, titanium cookware, and luxury organic bedding come ready to roll.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn-gold">
+            <span>Discover Our Story & Fleet</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1200&q=80" 
+                 alt="VanVoyage Overland Camp at Dusk" 
+                 class="rounded-4 shadow-lg w-100" 
+                 style="border: 2px solid var(--border-gold); aspect-ratio: 4/3; object-fit: cover;">
+            
+            <div class="position-absolute bottom-0 start-0 translate-middle-y ms-4 p-3 rounded-3" 
+                 style="background: rgba(24, 37, 31, 0.9); backdrop-filter: blur(12px); border: 1px solid var(--border-gold); max-width: 280px;">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-gold"></i>
+                <span class="small fw-bold text-white">Leave No Trace Certified</span>
+              </div>
+              <div class="small" style="color: var(--color-cream); font-size: 0.75rem;">100% Carbon Offset on every rental mile driven.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CUSTOMER TESTIMONIALS (SWIPER SLIDER)
+       ========================================================================== -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-tag">From Fellow Explorers</span>
+        <h2 class="section-title">Stories From The Open Road</h2>
+        <p class="section-subtitle">
+          Over 4,500 adventurers have taken VanVoyage vehicles into the wildest corners of North America. Here is what they experienced.
+        </p>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper testimonialsSwiper pb-5" data-aos="fade-up" data-aos-delay="150">
+        <div class="swiper-wrapper" id="testimonials-wrapper">
+          <!-- Populated dynamically via JavaScript -->
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       NEWSLETTER & ADVENTURE DISPATCH CTA
+       ========================================================================== -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container">
+      <div class="cta-banner text-center" data-aos="zoom-in">
+        <span class="eyebrow-badge">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>The VanVoyage Backcountry Dispatch</span>
+        </span>
+        <h2 class="font-heading fw-bold text-white mb-3" style="font-size: clamp(2rem, 3.5vw, 2.75rem);">
+          Get Secret Free Camping Coordinates & Road Trip Guides
+        </h2>
+        <p class="mx-auto text-cream mb-4" style="max-width: 600px; color: var(--color-cream);">
+          Join 28,000+ overland enthusiasts. We send curated GPS tracks, seasonal route closures, and exclusive fleet discounts twice monthly. No spam ever.
+        </p>
+
+        <form class="newsletter-form" onsubmit="event.preventDefault(); handleNewsletter(this);">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+          <button type="submit" class="btn-gold py-2 px-4" style="border-radius: var(--radius-full);">
+            <span>Subscribe</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Brand Story Column -->
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo.svg" alt="VanVoyage Logo" height="42">
+          </a>
+          <p class="footer-desc">
+            VanVoyage provides premium campervan, 4x4 overland expedition, and luxury RV rentals for travelers who crave authentic wilderness, scenic highways, and outdoor freedom.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <i data-lucide="youtube"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Twitter">
+              <i data-lucide="twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="vehicles.html" class="footer-link">Fleet & Vehicles</a></li>
+            <li><a href="destinations.html" class="footer-link">Destinations</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Depots</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Hub Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Customer Hub</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="login.html" class="footer-link">Account Login</a></li>
+            <li><a href="register.html" class="footer-link">Register Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Customer Dashboard</a></li>
+            <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+            <li><a href="saved-vehicles.html" class="footer-link">Saved Vehicles</a></li>
+          </ul>
+        </div>
+
+        <!-- Depot Contact & Hours -->
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Headquarters & Support</h5>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin"></i>
+            <span>742 Overland Ridge Way, Boulder, CO 80302</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="phone"></i>
+            <span>+1 (800) 584-VOYAGE (24/7 Roadside)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="mail"></i>
+            <span>adventures@vanvoyage.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="clock"></i>
+            <span>Depot Check-in: Mon - Sun (8:00 AM - 6:00 PM)</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 VanVoyage Adventure Travel Inc. "Adventure Beyond the Ordinary." All rights reserved.
+        </div>
+        <div class="d-flex gap-4">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">Terms of Service</a>
+          <a href="contact.html" class="footer-link">Rental Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SHARED QUICK-BOOKING MODAL
+       ========================================================================== -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div>
+            <span class="section-tag mb-1">Instant Reservation</span>
+            <h5 class="modal-title font-heading fw-bold" id="modalVehicleTitle">Vehicle Reservation</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form id="quick-reservation-form" onsubmit="event.preventDefault(); submitBookingModal();">
+          <input type="hidden" id="modalVehicleId">
+          <div class="modal-body p-4">
+            
+            <div class="row g-4 mb-4">
+              <div class="col-md-5">
+                <img id="modalVehicleImg" src="" alt="Vehicle" class="rounded-3 w-100" style="aspect-ratio: 16/10; object-fit: cover; border: 1px solid var(--border-gold);">
+                <div class="mt-2 d-flex justify-content-between align-items-center">
+                  <span class="text-muted small">Daily Base Rate:</span>
+                  <span class="fw-bold text-gold" id="modalVehicleRate">$0/day</span>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label-custom">Pickup & Dropoff Depot</label>
+                    <select class="form-control-custom" id="modalDepotSelect" required>
+                      <option value="Boulder Overland Hub (HQ)">Boulder Overland Hub (HQ) – Boulder, CO</option>
+                      <option value="Pacific Coast Depot">Pacific Coast Depot – Portland, OR</option>
+                      <option value="High Sierra Station">High Sierra Station – Lake Tahoe, CA</option>
+                      <option value="Red Rock Gateway">Red Rock Gateway – Moab, UT</option>
+                    </select>
+                  </div>
+
+                  <div class="col-6">
+                    <label class="form-label-custom">Pickup Date</label>
+                    <input type="date" class="form-control-custom" id="modalPickupDate" required onchange="handleModalDateChange()">
+                  </div>
+
+                  <div class="col-6">
+                    <label class="form-label-custom">Dropoff Date</label>
+                    <input type="date" class="form-control-custom" id="modalDropoffDate" required onchange="handleModalDateChange()">
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label-custom">Select Protection Plan</label>
+                    <select class="form-control-custom" id="modalInsuranceSelect">
+                      <option value="Full Adventure Shield (Zero Deductible)">Full Adventure Shield ($25/day - Recommended)</option>
+                      <option value="Standard Explorer ($1,000 Deductible)">Standard Explorer Protection (Included)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Breakdown Summary -->
+            <div class="p-3 rounded-3" style="background: var(--bg-muted); border: 1px solid var(--border-light);">
+              <div class="d-flex justify-content-between mb-2 small">
+                <span class="text-muted">Trip Duration:</span>
+                <span class="fw-bold" id="modalSummaryDays">5 days</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2 small">
+                <span class="text-muted">Standard Preparation & Prep Fee:</span>
+                <span class="fw-bold">$85</span>
+              </div>
+              <div class="d-flex justify-content-between pt-2 border-top border-secondary-subtle">
+                <span class="fw-bold">Estimated Total:</span>
+                <span class="fw-bold text-gold fs-5" id="modalSummaryTotal">$0</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer modal-footer-custom d-flex justify-content-between">
+            <button type="button" class="btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn-gold">
+              <i data-lucide="check" class="w-4 h-4"></i>
+              <span>Confirm & Add To Bookings</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- AOS Animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- App Data & Logic -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/booking.js"></script>
+
+  <!-- Page Specific Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 80
+      });
+
+      // Initialize Hero Background Slideshow
+      const slides = document.querySelectorAll('.hero-bg-slide');
+      let currentSlide = 0;
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 6500);
+
+      // Set default dates for search
+      const today = new Date();
+      const nextWeek = new Date(today);
+      nextWeek.setDate(today.getDate() + 7);
+      const afterWeek = new Date(nextWeek);
+      afterWeek.setDate(nextWeek.getDate() + 6);
+
+      const pInput = document.getElementById('hero-search-pickup');
+      const rInput = document.getElementById('hero-search-return');
+      if (pInput && rInput) {
+        pInput.value = nextWeek.toISOString().split('T')[0];
+        pInput.min = today.toISOString().split('T')[0];
+        rInput.value = afterWeek.toISOString().split('T')[0];
+        rInput.min = pInput.value;
+      }
+
+      // Render Featured Vehicles (first 3)
+      renderFeaturedVehicles();
+
+      // Render Featured Destinations (first 3)
+      renderFeaturedDestinations();
+
+      // Render Why Choose Us
+      renderWhyChoose();
+
+      // Render Testimonials & Swiper
+      renderTestimonials();
+
+      initLucide();
+    });
+
+    function renderFeaturedVehicles() {
+      const grid = document.getElementById('featured-vehicles-grid');
+      if (!grid) return;
+
+      const featured = window.VANVOYAGE_DATA.vehicles.filter(v => v.featured).slice(0, 3);
+      grid.innerHTML = featured.map(v => `
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+          <div class="van-card">
+            <div class="van-card-media">
+              <img src="${v.image}" alt="${v.name}" class="van-card-img" loading="lazy">
+              <span class="van-card-badge">${v.categoryLabel}</span>
+              <button class="van-card-wishlist" data-wishlist-id="${v.id}" onclick="BookingEngine.toggleSave('${v.id}')" aria-label="Save to wishlist">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="van-card-body">
+              <div class="van-card-rating">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <span>${v.rating}</span>
+                <span class="text-muted">(${v.reviewsCount} reviews)</span>
+              </div>
+              <h3 class="van-card-title">${v.name}</h3>
+              <p class="van-card-tagline">${v.tagline}</p>
+              
+              <div class="van-specs-grid">
+                <div class="van-spec-item">
+                  <i data-lucide="users"></i>
+                  <span>${v.passengers} Seats</span>
+                </div>
+                <div class="van-spec-item">
+                  <i data-lucide="moon"></i>
+                  <span>Sleeps ${v.sleeps}</span>
+                </div>
+                <div class="van-spec-item">
+                  <i data-lucide="gauge"></i>
+                  <span>${v.drive}</span>
+                </div>
+              </div>
+
+              <div class="van-card-features">
+                ${v.features.slice(0, 3).map(f => `<span class="feature-pill">${f}</span>`).join('')}
+              </div>
+
+              <div class="van-card-footer">
+                <div class="van-price-wrap">
+                  <span class="van-price-num">$${v.dailyRate}</span>
+                  <span class="van-price-per">per night</span>
+                </div>
+                <button class="btn-gold btn-sm-custom" onclick="BookingEngine.openBookingModal('${v.id}')">
+                  <span>Book Now</span>
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderFeaturedDestinations() {
+      const grid = document.getElementById('featured-destinations-grid');
+      if (!grid) return;
+
+      const dests = window.VANVOYAGE_DATA.destinations.slice(0, 3);
+      grid.innerHTML = dests.map(d => `
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+          <div class="dest-card">
+            <div class="dest-card-media">
+              <img src="${d.image}" alt="${d.title}" class="dest-card-img" loading="lazy">
+              <div class="dest-card-overlay"></div>
+              <span class="dest-badge">${d.badge}</span>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-region">${d.region}</div>
+              <h4 class="dest-title">${d.title}</h4>
+              <div class="dest-meta-row">
+                <div class="dest-meta-item">
+                  <i data-lucide="navigation"></i>
+                  <span>${d.distance}</span>
+                </div>
+                <div class="dest-meta-item">
+                  <i data-lucide="clock"></i>
+                  <span>${d.duration}</span>
+                </div>
+              </div>
+              <p class="text-muted small mb-4">${d.description}</p>
+              <a href="destinations.html" class="btn-outline-gold btn-sm-custom mt-auto w-100 text-center">
+                <span>View Route Guide & Itinerary</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderWhyChoose() {
+      const grid = document.getElementById('why-choose-grid');
+      if (!grid) return;
+
+      grid.innerHTML = window.VANVOYAGE_DATA.whyChooseUs.map(item => `
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+          <div class="feature-box">
+            <div class="feature-icon-wrap">
+              <i data-lucide="${item.icon}"></i>
+            </div>
+            <h4 class="feature-box-title">${item.title}</h4>
+            <p class="feature-box-desc">${item.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderTestimonials() {
+      const wrapper = document.getElementById('testimonials-wrapper');
+      if (!wrapper) return;
+
+      wrapper.innerHTML = window.VANVOYAGE_DATA.testimonials.map(t => `
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="test-stars">
+              ${Array(t.rating).fill('<i data-lucide="star" class="w-4 h-4 fill-current"></i>').join('')}
+            </div>
+            <p class="test-quote">"${t.quote}"</p>
+            <div class="test-author-row mt-auto">
+              <img src="${t.avatar}" alt="${t.name}" class="test-avatar">
+              <div>
+                <h5 class="test-name">${t.name}</h5>
+                <div class="test-role">${t.role}</div>
+                <div class="test-route-badge">Route: ${t.route}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      new Swiper('.testimonialsSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        }
+      });
+    }
+
+    function handleHeroSearch() {
+      const category = document.getElementById('hero-search-category').value;
+      const depot = document.getElementById('hero-search-depot').value;
+      // Navigate to vehicles page with search params
+      window.location.href = `vehicles.html?category=${encodeURIComponent(category)}&depot=${encodeURIComponent(depot)}`;
+    }
+
+    function handleModalDateChange() {
+      const vid = document.getElementById('modalVehicleId').value;
+      const v = window.VANVOYAGE_DATA.vehicles.find(item => item.id === vid);
+      if (v) {
+        BookingEngine.calculateModalTotal(v.dailyRate);
+      }
+    }
+
+    function submitBookingModal() {
+      const vid = document.getElementById('modalVehicleId').value;
+      const vehicle = window.VANVOYAGE_DATA.vehicles.find(v => v.id === vid);
+      if (!vehicle) return;
+
+      const pDate = document.getElementById('modalPickupDate').value;
+      const dDate = document.getElementById('modalDropoffDate').value;
+      const depot = document.getElementById('modalDepotSelect').value;
+      const insurance = document.getElementById('modalInsuranceSelect').value;
+
+      const diffDays = Math.max(1, Math.ceil((new Date(dDate) - new Date(pDate)) / (1000 * 60 * 60 * 24)));
+      const totalAmount = (vehicle.dailyRate * diffDays) + 85 + (diffDays * 25);
+
+      const newBooking = {
+        id: `VV-${Math.floor(10000 + Math.random() * 90000)}`,
+        vehicleId: vehicle.id,
+        vehicleName: vehicle.name,
+        vehicleImage: vehicle.image,
+        pickupDate: pDate,
+        dropoffDate: dDate,
+        days: diffDays,
+        pickupLocation: depot,
+        dropoffLocation: depot,
+        dailyRate: vehicle.dailyRate,
+        totalAmount: totalAmount,
+        status: "Upcoming",
+        statusClass: "badge-upcoming",
+        passengers: vehicle.passengers,
+        addons: ["Leave No Trace Camp Clean Kit ($35)"],
+        bookingDate: new Date().toISOString().split('T')[0],
+        insurance: insurance,
+        confirmationCode: `VV-RES-${Math.floor(1000 + Math.random() * 9000)}`
+      };
+
+      BookingEngine.createBooking(newBooking);
+
+      const modalEl = document.getElementById('bookingModal');
+      const bsModal = bootstrap.Modal.getInstance(modalEl);
+      if (bsModal) bsModal.hide();
+
+      showToast(`Booking ${newBooking.id} confirmed! Redirecting to Dashboard...`, "check-circle");
+      setTimeout(() => {
+        window.location.href = 'bookings.html';
+      }, 1500);
+    }
+
+    function handleNewsletter(form) {
+      showToast("Thank you for subscribing! Check your inbox for secret camping coordinates.", "send");
+      form.reset();
+    }
+  </script>
+</body>
+</html>

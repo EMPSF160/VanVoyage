@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2BE82" />
+      <stop offset="50%" stop-color="#C49A5A" />
+      <stop offset="100%" stop-color="#A66D45" />
+    </linearGradient>
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3129" />
+      <stop offset="100%" stop-color="#111B17" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#forestGrad)" stroke="url(#goldGrad)" stroke-width="2" />
+  
+  <!-- Compass Star North Indicator -->
+  <polygon points="32,6 34,14 32,12 30,14" fill="#E2BE82" />
+  
+  <!-- Mountain Peaks -->
+  <polygon points="12,42 24,24 33,37 42,20 54,42" fill="#18251F" stroke="#C49A5A" stroke-width="1.5" stroke-linejoin="round" />
+  <polygon points="24,24 28,30 22,30" fill="#E9E3D5" opacity="0.9" />
+  <polygon points="42,20 46,27 39,27" fill="#E9E3D5" opacity="0.9" />
+
+  <!-- Sun / Horizon Compass Ring -->
+  <circle cx="32" cy="22" r="6" fill="none" stroke="#C49A5A" stroke-dasharray="2,2" stroke-width="1" opacity="0.6" />
+
+  <!-- Campervan Silhouette in foreground -->
+  <g transform="translate(16, 36) scale(0.65)">
+    <!-- Van Body -->
+    <path d="M4,15 L7,7 Q9,4 13,4 L34,4 Q38,4 40,8 L44,12 Q46,14 46,17 L46,24 Q46,26 44,26 L40,26 M30,26 L18,26 M8,26 L4,26 Q2,26 2,24 L2,17 Q2,15 4,15 Z" fill="#E9E3D5" stroke="#18251F" stroke-width="1.5" />
+    <!-- Pop-up tent roof -->
+    <polygon points="10,4 32,4 28,-3 14,-3" fill="#C49A5A" />
+    <!-- Front windshield & side window -->
+    <path d="M35,6 L39,11 L43,12 L35,12 Z" fill="#18251F" />
+    <rect x="22" y="6" width="10" height="6" rx="1" fill="#18251F" />
+    <rect x="10" y="6" width="9" height="6" rx="1" fill="#18251F" />
+    <!-- Wheels -->
+    <circle cx="13" cy="26" r="4.5" fill="#343A36" stroke="#C49A5A" stroke-width="1.5" />
+    <circle cx="13" cy="26" r="1.5" fill="#E9E3D5" />
+    <circle cx="35" cy="26" r="4.5" fill="#343A36" stroke="#C49A5A" stroke-width="1.5" />
+    <circle cx="35" cy="26" r="1.5" fill="#E9E3D5" />
+  </g>
+
+  <!-- Winding Path -->
+  <path d="M8,54 Q20,46 32,50 T56,48" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+</svg>

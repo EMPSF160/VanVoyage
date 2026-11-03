@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations & Itineraries | VanVoyage – Road Trips & Overlanding</title>
+  <meta name="description" content="Discover hand-scouted overlanding routes, alpine passes, Pacific coastal drives, and secret wilderness boondocking locations across North America.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Scroll Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN HEADER & NAVIGATION
+       At <=1024px: Shows ONLY Logo & Hamburger on the same row.
+       ========================================================================== -->
+  <header class="main-header header-hero-transparent">
+    <div class="container-fluid px-lg-5">
+      <div class="nav-container">
+        
+        <!-- VanVoyage Logo -->
+        <a href="index.html" class="brand-logo-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="220" height="48">
+            <defs>
+              <linearGradient id="navLogoGoldDest" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E2BE82" />
+                <stop offset="50%" stop-color="#C49A5A" />
+                <stop offset="100%" stop-color="#A66D45" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(6, 6)">
+              <path d="M24,2 L44,10 L44,30 C44,40 24,47 24,47 C24,47 4,40 4,30 L4,10 Z" fill="#18251F" stroke="url(#navLogoGoldDest)" stroke-width="2" />
+              <polygon points="10,34 20,18 27,28 34,14 40,34" fill="#141E19" stroke="#C49A5A" stroke-width="1.2" stroke-linejoin="round" />
+              <polygon points="20,18 23,23 18,23" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="34,14 37,20 31,20" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="24,6 26,11 30,12 26,13 24,18 22,13 18,12 22,11" fill="url(#navLogoGoldDest)" />
+              <path d="M8,38 Q24,34 40,38" fill="none" stroke="url(#navLogoGoldDest)" stroke-width="2" stroke-linecap="round" />
+            </g>
+            <g transform="translate(62, 32)">
+              <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="21" letter-spacing="3.5" fill="currentColor">
+                <tspan fill="#C49A5A">VAN</tspan><tspan fill="#E9E3D5">VOYAGE</tspan>
+              </text>
+              <text y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#E2BE82">
+                ADVENTURE TRAVEL • CAMPERVAN
+              </text>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Menu (> 1024px) -->
+        <ul class="nav-menu-desktop list-unstyled">
+          <li><a href="index.html" class="nav-link-custom">Home</a></li>
+          <li><a href="about.html" class="nav-link-custom">About Us</a></li>
+          <li><a href="vehicles.html" class="nav-link-custom">Vehicles</a></li>
+          <li><a href="destinations.html" class="nav-link-custom active">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+
+        <!-- Desktop Actions & Theme Toggle (> 1024px) -->
+        <div class="nav-actions-desktop">
+          <button class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+          
+          <div class="nav-auth-slot d-flex align-items-center gap-2">
+            <a href="login.html" class="btn-outline-light btn-sm-custom">Login</a>
+            <a href="register.html" class="btn-gold btn-sm-custom">Register</a>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Button (<= 1024px) -->
+        <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav" aria-controls="mobileOffcanvasNav" aria-label="Open Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-mobile-menu" tabindex="-1" id="mobileOffcanvasNav">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/favicon.svg" alt="VanVoyage Emblem" width="32" height="32">
+        <span class="font-heading fw-bold text-gold" style="font-size: 1.2rem;">VANVOYAGE</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link"><span>Home</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="about.html" class="mobile-nav-link"><span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="vehicles.html" class="mobile-nav-link"><span>Vehicles</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="destinations.html" class="mobile-nav-link active"><span>Destinations</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="contact.html" class="mobile-nav-link"><span>Contact</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <div class="px-4 py-2">
+          <div class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 8px;">Customer Portal</div>
+          <a href="dashboard.html" class="mobile-nav-link py-2 px-0"><span>Customer Dashboard</span><i data-lucide="layout-dashboard" class="w-4 h-4 text-gold"></i></a>
+          <a href="saved-vehicles.html" class="mobile-nav-link py-2 px-0"><span>Saved Vehicles</span><i data-lucide="heart" class="w-4 h-4 text-gold"></i></a>
+        </div>
+      </div>
+      <div class="mobile-nav-footer">
+        <div class="d-flex align-items-center justify-content-between mb-3 p-2 rounded" style="background: var(--bg-muted);">
+          <span style="font-size: 0.875rem; font-weight: 600;">Theme Mode</span>
+          <button class="theme-toggle-btn" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+        </div>
+        <div class="mobile-auth-slot">
+          <a href="login.html" class="btn-outline-gold w-100 mb-2">Login to Account</a>
+          <a href="register.html" class="btn-gold w-100">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content" data-aos="fade-up">
+      <div class="eyebrow-badge">
+        <i data-lucide="map" class="w-4 h-4"></i>
+        <span>Curated Road Trip Guides</span>
+      </div>
+      <h1 class="display-3 font-heading fw-bold text-white mb-3">
+        Epic Overland Trails & <br>
+        <span class="text-gold font-serif fst-italic">Wilderness Corridors.</span>
+      </h1>
+      <p class="lead text-cream mx-auto" style="max-width: 680px; color: var(--color-cream);">
+        Each route has been meticulously scouted for clearance, BLM boondocking spots, and unparalleled scenic vistas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Destination Routes Showcase -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      
+      <!-- Filter Bar -->
+      <div class="filter-bar-card mb-5" data-aos="fade-up">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+          <div class="d-flex flex-wrap gap-2" id="dest-type-pills">
+            <button class="filter-pill-btn active" data-type="all">All Routes (6)</button>
+            <button class="filter-pill-btn" data-type="Mountain Road Trip">Mountain Passes</button>
+            <button class="filter-pill-btn" data-type="Coastal Route">Coastal Highways</button>
+            <button class="filter-pill-btn" data-type="Overlanding Trail">4x4 Overland</button>
+            <button class="filter-pill-btn" data-type="Forest Camping">Forest Camping</button>
+          </div>
+          <div class="text-muted small">
+            <i data-lucide="info" class="w-4 h-4 text-gold me-1"></i>
+            <span>Includes Turnkey Day-by-Day GPS Itineraries</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Destinations List with Expandable Day-by-Day Itineraries -->
+      <div class="d-flex flex-column gap-5" id="destinations-container">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Leave No Trace Backcountry Stewardship Banner -->
+  <section class="py-5 bg-muted-custom">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-2 text-center">
+          <div class="stat-icon-square mx-auto" style="width: 70px; height: 70px;">
+            <i data-lucide="trees" class="w-8 h-8"></i>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <h4 class="fw-bold mb-1">Our Wilderness Stewardship Promise</h4>
+          <p class="text-muted mb-0 small" style="line-height: 1.6;">
+            Every VanVoyage vehicle includes an eco-stewardship kit with biodegradable dish soaps, trash pack-out canisters, and firepan safety blankets. We provide pre-loaded Gaia GPS maps showing permitted BLM dispersed campsites to prevent overcrowding.
+          </p>
+        </div>
+        <div class="col-lg-3 text-lg-end">
+          <a href="contact.html" class="btn-forest">Download GPS Tracks</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo.svg" alt="VanVoyage Logo" height="42">
+          </a>
+          <p class="footer-desc">
+            VanVoyage provides premium campervan, 4x4 overland expedition, and luxury RV rentals for travelers who crave authentic wilderness, scenic highways, and outdoor freedom.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="vehicles.html" class="footer-link">Fleet & Vehicles</a></li>
+            <li><a href="destinations.html" class="footer-link">Destinations</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Depots</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Customer Hub</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="login.html" class="footer-link">Account Login</a></li>
+            <li><a href="register.html" class="footer-link">Register Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Customer Dashboard</a></li>
+            <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+            <li><a href="saved-vehicles.html" class="footer-link">Saved Vehicles</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Headquarters & Support</h5>
+          <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>742 Overland Ridge Way, Boulder, CO 80302</span></div>
+          <div class="footer-contact-item"><i data-lucide="phone"></i><span>+1 (800) 584-VOYAGE (24/7 Roadside)</span></div>
+          <div class="footer-contact-item"><i data-lucide="mail"></i><span>adventures@vanvoyage.com</span></div>
+          <div class="footer-contact-item"><i data-lucide="clock"></i><span>Depot Check-in: Mon - Sun (8:00 AM - 6:00 PM)</span></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 VanVoyage Adventure Travel Inc. "Adventure Beyond the Ordinary." All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">Terms of Service</a>
+          <a href="contact.html" class="footer-link">Rental Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/booking.js"></script>
+
+  <script>
+    let activeType = 'all';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
+
+      // Filter pills
+      document.querySelectorAll('#dest-type-pills .filter-pill-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#dest-type-pills .filter-pill-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeType = btn.getAttribute('data-type');
+          renderDestinations();
+        });
+      });
+
+      renderDestinations();
+    });
+
+    function renderDestinations() {
+      const container = document.getElementById('destinations-container');
+      if (!container) return;
+
+      let list = window.VANVOYAGE_DATA.destinations;
+      if (activeType !== 'all') {
+        list = list.filter(d => d.type === activeType);
+      }
+
+      container.innerHTML = list.map((d, idx) => `
+        <div class="van-card p-0" data-aos="fade-up">
+          <div class="row g-0">
+            
+            <!-- Route Image & Badges -->
+            <div class="col-lg-5 position-relative" style="min-height: 320px;">
+              <img src="${d.image}" alt="${d.title}" class="w-100 h-100" style="object-fit: cover;">
+              <span class="van-card-badge">${d.badge}</span>
+              <div class="position-absolute bottom-0 start-0 p-3 w-100" style="background: linear-gradient(180deg, transparent, rgba(16, 24, 20, 0.9)); color: #FFFFFF;">
+                <span class="small text-gold fw-bold text-uppercase">${d.region}</span>
+                <h4 class="fw-bold mb-0">${d.title}</h4>
+              </div>
+            </div>
+
+            <!-- Route Details & Day-by-Day Accordion -->
+            <div class="col-lg-7 p-4 d-flex flex-column">
+              <div class="d-flex flex-wrap gap-3 mb-3 small text-muted">
+                <div><i data-lucide="navigation" class="text-gold w-4 h-4 me-1"></i><strong>${d.distance}</strong></div>
+                <div><i data-lucide="clock" class="text-gold w-4 h-4 me-1"></i><strong>${d.duration}</strong></div>
+                <div><i data-lucide="shield" class="text-gold w-4 h-4 me-1"></i><strong>${d.difficulty}</strong></div>
+                <div><i data-lucide="calendar" class="text-gold w-4 h-4 me-1"></i>Season: <strong>${d.bestSeason}</strong></div>
+              </div>
+
+              <p class="text-muted mb-3" style="line-height: 1.6;">${d.description}</p>
+
+              <!-- Highlights -->
+              <div class="mb-4">
+                <span class="small fw-bold text-main d-block mb-2">Expedition Highlights:</span>
+                <div class="d-flex flex-wrap gap-2">
+                  ${d.highlights.map(h => `<span class="feature-pill"><i data-lucide="check-circle-2" class="w-3 h-3 text-gold me-1"></i>${h}</span>`).join('')}
+                </div>
+              </div>
+
+              <!-- Collapsible Itinerary -->
+              <div class="accordion mb-4" id="itineraryAccordion-${d.id}">
+                <div class="accordion-item" style="background: var(--bg-muted); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden;">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold small text-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${d.id}" aria-expanded="false" style="background: var(--bg-muted); box-shadow: none;">
+                      <i data-lucide="calendar-days" class="w-4 h-4 me-2"></i>
+                      <span>View Detailed Day-by-Day Itinerary (${d.itinerary.length} Phases)</span>
+                    </button>
+                  </h2>
+                  <div id="collapse-${d.id}" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion-${d.id}">
+                    <div class="accordion-body p-3">
+                      <div class="d-flex flex-column gap-3">
+                        ${d.itinerary.map(step => `
+                          <div class="border-start border-2 border-warning ps-3">
+                            <div class="fw-bold text-main small">${step.day}: ${step.title}</div>
+                            <div class="text-muted small" style="font-size: 0.8125rem;">${step.desc}</div>
+                          </div>
+                        `).join('')}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Row -->
+              <div class="mt-auto d-flex align-items-center justify-content-between pt-3 border-top border-light-subtle">
+                <div class="small text-muted">
+                  Recommended Rig: <strong class="text-gold">${d.recommendedCategory.toUpperCase()}</strong>
+                </div>
+                <a href="vehicles.html?category=${d.recommendedCategory}" class="btn-gold btn-sm-custom">
+                  <span>Match & Rent Rig for This Route</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      `).join('');
+
+      initLucide();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicles & Fleet | VanVoyage – Campervan, RV & 4x4 Overlanding</title>
+  <meta name="description" content="Explore the VanVoyage fleet: Mercedes Sprinter 4x4 overlanders, California campervans, and luxury off-grid RV motorhomes. Fully outfitted for backcountry travel.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Scroll Animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Master Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN HEADER & NAVIGATION
+       At <=1024px: Shows ONLY Logo & Hamburger on the same row.
+       ========================================================================== -->
+  <header class="main-header header-hero-transparent">
+    <div class="container-fluid px-lg-5">
+      <div class="nav-container">
+        
+        <!-- VanVoyage Logo -->
+        <a href="index.html" class="brand-logo-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="220" height="48">
+            <defs>
+              <linearGradient id="navLogoGoldVehicles" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E2BE82" />
+                <stop offset="50%" stop-color="#C49A5A" />
+                <stop offset="100%" stop-color="#A66D45" />
+              </linearGradient>
+            </defs>
+            <g transform="translate(6, 6)">
+              <path d="M24,2 L44,10 L44,30 C44,40 24,47 24,47 C24,47 4,40 4,30 L4,10 Z" fill="#18251F" stroke="url(#navLogoGoldVehicles)" stroke-width="2" />
+              <polygon points="10,34 20,18 27,28 34,14 40,34" fill="#141E19" stroke="#C49A5A" stroke-width="1.2" stroke-linejoin="round" />
+              <polygon points="20,18 23,23 18,23" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="34,14 37,20 31,20" fill="#E9E3D5" opacity="0.9" />
+              <polygon points="24,6 26,11 30,12 26,13 24,18 22,13 18,12 22,11" fill="url(#navLogoGoldVehicles)" />
+              <path d="M8,38 Q24,34 40,38" fill="none" stroke="url(#navLogoGoldVehicles)" stroke-width="2" stroke-linecap="round" />
+            </g>
+            <g transform="translate(62, 32)">
+              <text font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="21" letter-spacing="3.5" fill="currentColor">
+                <tspan fill="#C49A5A">VAN</tspan><tspan fill="#E9E3D5">VOYAGE</tspan>
+              </text>
+              <text y="14" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="7.5" letter-spacing="1.5" fill="#E2BE82">
+                ADVENTURE TRAVEL • CAMPERVAN
+              </text>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Menu (> 1024px) -->
+        <ul class="nav-menu-desktop list-unstyled">
+          <li><a href="index.html" class="nav-link-custom">Home</a></li>
+          <li><a href="about.html" class="nav-link-custom">About Us</a></li>
+          <li><a href="vehicles.html" class="nav-link-custom active">Vehicles</a></li>
+          <li><a href="destinations.html" class="nav-link-custom">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+
+        <!-- Desktop Actions & Theme Toggle (> 1024px) -->
+        <div class="nav-actions-desktop">
+          <button class="theme-toggle-btn" aria-label="Toggle theme">
+            <i data-lucide="sun"></i>
+          </button>
+          
+          <div class="nav-auth-slot d-flex align-items-center gap-2">
+            <a href="login.html" class="btn-outline-light btn-sm-custom">Login</a>
+            <a href="register.html" class="btn-gold btn-sm-custom">Register</a>
+          </div>
+        </div>
+
+        <!-- Hamburger Menu Button (<= 1024px) -->
+        <button class="hamburger-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasNav" aria-controls="mobileOffcanvasNav" aria-label="Open Navigation">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-mobile-menu" tabindex="-1" id="mobileOffcanvasNav">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/favicon.svg" alt="VanVoyage Emblem" width="32" height="32">
+        <span class="font-heading fw-bold text-gold" style="font-size: 1.2rem;">VANVOYAGE</span>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link"><span>Home</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="about.html" class="mobile-nav-link"><span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="vehicles.html" class="mobile-nav-link active"><span>Vehicles</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="destinations.html" class="mobile-nav-link"><span>Destinations</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <a href="contact.html" class="mobile-nav-link"><span>Contact</span><i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        <div class="px-4 py-2">
+          <div class="text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 8px;">Customer Portal</div>
+          <a href="dashboard.html" class="mobile-nav-link py-2 px-0"><span>Customer Dashboard</span><i data-lucide="layout-dashboard" class="w-4 h-4 text-gold"></i></a>
+          <a href="saved-vehicles.html" class="mobile-nav-link py-2 px-0"><span>Saved Vehicles</span><i data-lucide="heart" class="w-4 h-4 text-gold"></i></a>
+        </div>
+      </div>
+      <div class="mobile-nav-footer">
+        <div class="d-flex align-items-center justify-content-between mb-3 p-2 rounded" style="background: var(--bg-muted);">
+          <span style="font-size: 0.875rem; font-weight: 600;">Theme Mode</span>
+          <button class="theme-toggle-btn" aria-label="Toggle theme"><i data-lucide="sun"></i></button>
+        </div>
+        <div class="mobile-auth-slot">
+          <a href="login.html" class="btn-outline-gold w-100 mb-2">Login to Account</a>
+          <a href="register.html" class="btn-gold w-100">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1527786356703-4b100091cd2c?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container page-hero-content" data-aos="fade-up">
+      <div class="eyebrow-badge">
+        <i data-lucide="truck" class="w-4 h-4"></i>
+        <span>Curated Fleet Collection</span>
+      </div>
+      <h1 class="display-3 font-heading fw-bold text-white mb-3">
+        Find Your Backcountry <br>
+        <span class="text-gold font-serif fst-italic">Expedition Rig.</span>
+      </h1>
+      <p class="lead text-cream mx-auto" style="max-width: 680px; color: var(--color-cream);">
+        Filter across agile pop-top campervans, unstoppable 4WD overland rigs, and hotel-class luxury motorhomes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Filters & Vehicle Catalog -->
+  <section class="py-5" style="background-color: var(--bg-body);">
+    <div class="container py-lg-4">
+      
+      <!-- Filter Bar Card -->
+      <div class="filter-bar-card" data-aos="fade-up">
+        <div class="row g-3 align-items-center">
+          
+          <!-- Category Pills -->
+          <div class="col-lg-6 col-12">
+            <div class="d-flex flex-wrap gap-2" id="category-pills">
+              <button class="filter-pill-btn active" data-category="all">All Vehicles (9)</button>
+              <button class="filter-pill-btn" data-category="overland">4x4 Overland (3)</button>
+              <button class="filter-pill-btn" data-category="campervan">Campervans (3)</button>
+              <button class="filter-pill-btn" data-category="luxury-rv">Luxury RVs (3)</button>
+            </div>
+          </div>
+
+          <!-- Search Input -->
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="position-relative">
+              <input type="text" id="vehicle-search-input" class="form-control-custom ps-5" placeholder="Search by name, gear, engine...">
+              <i data-lucide="search" class="position-absolute top-50 start-0 translate-middle-y ms-3 text-muted w-4 h-4"></i>
+            </div>
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div class="col-lg-3 col-md-6 col-12">
+            <select class="form-control-custom" id="vehicle-sort-select">
+              <option value="featured">Sort: Featured First</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating-desc">Rating: Highest Rated</option>
+              <option value="passengers-desc">Capacity: Most Berths</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Secondary Filters Row: Price Slider & Passenger Count -->
+        <div class="row g-3 align-items-center mt-3 pt-3 border-top border-light-subtle">
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label class="form-label-custom mb-0 small text-muted">Max Daily Rate:</label>
+              <span class="fw-bold text-gold small" id="price-slider-display">$350 / day</span>
+            </div>
+            <input type="range" class="form-range" id="price-slider" min="130" max="360" step="10" value="360" style="accent-color: var(--color-gold);">
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="d-flex align-items-center justify-content-lg-end gap-2">
+              <span class="small text-muted fw-semibold me-2">Passengers:</span>
+              <div class="btn-group" role="group" id="passenger-filter-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary active" data-passengers="all">Any</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-passengers="2">2+ Seats</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-passengers="4">4+ Seats</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-passengers="6">6 Seats</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Vehicle Catalog Grid -->
+      <div class="row g-4" id="fleet-catalog-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Empty State if no results -->
+      <div id="catalog-empty-state" class="text-center py-5 d-none">
+        <i data-lucide="compass" class="w-12 h-12 text-gold mb-3 mx-auto"></i>
+        <h4 class="fw-bold">No vehicles match your active filters</h4>
+        <p class="text-muted">Try clearing the search keyword or increasing your maximum price filter.</p>
+        <button class="btn-outline-gold mt-2" onclick="resetAllFilters()">Reset All Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VEHICLE DETAILS MODAL
+       ========================================================================== -->
+  <div class="modal fade" id="vehicleDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div>
+            <span class="badge-status badge-upcoming mb-1" id="detailModalCategory">4x4 Overlanding</span>
+            <h4 class="modal-title font-heading fw-bold" id="detailModalTitle">Vehicle Name</h4>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            
+            <!-- Gallery & Main Image -->
+            <div class="col-lg-6">
+              <img id="detailModalMainImg" src="" alt="Vehicle Large" class="rounded-3 w-100 mb-2 shadow-sm" style="aspect-ratio: 16/10; object-fit: cover; border: 1px solid var(--border-gold);">
+              <div class="d-flex gap-2" id="detailModalThumbnails">
+                <!-- Gallery thumbs -->
+              </div>
+            </div>
+
+            <!-- Vehicle Summary & Specifications -->
+            <div class="col-lg-6">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="text-gold fw-bold fs-5">★ <span id="detailModalRating">4.98</span></span>
+                  <span class="text-muted small">(<span id="detailModalReviews">64</span> verified expeditions)</span>
+                </div>
+                <div class="text-end">
+                  <div class="font-heading fw-bold text-gold fs-3" id="detailModalRate">$235</div>
+                  <div class="text-muted small">per rental night</div>
+                </div>
+              </div>
+
+              <p class="text-muted mb-4" id="detailModalDescription" style="line-height: 1.7;"></p>
+
+              <!-- Technical Specifications Table -->
+              <h6 class="fw-bold font-heading mb-2">Fleet Specifications</h6>
+              <div class="p-3 rounded-3 mb-4" style="background: var(--bg-muted); border: 1px solid var(--border-light);">
+                <div class="row g-2 small" id="detailModalSpecsGrid">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <!-- Included Backcountry Amenities -->
+              <h6 class="fw-bold font-heading mb-2">Turnkey Included Gear & Amenities</h6>
+              <ul class="list-unstyled row g-2 small mb-4" id="detailModalAmenitiesList">
+                <!-- Injected via JS -->
+              </ul>
+
+              <!-- Direct Booking CTA Button inside modal -->
+              <div class="d-flex gap-3">
+                <button type="button" class="btn-gold flex-grow-1" id="detailModalBookBtn">
+                  <i data-lucide="calendar" class="w-4 h-4"></i>
+                  <span>Reserve This Rig</span>
+                </button>
+                <button type="button" class="btn-outline-gold" id="detailModalWishlistBtn">
+                  <i data-lucide="heart" class="w-4 h-4"></i>
+                  <span>Save Rig</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Universal Booking Modal -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div>
+            <span class="section-tag mb-1">Instant Reservation</span>
+            <h5 class="modal-title font-heading fw-bold" id="modalVehicleTitle">Vehicle Reservation</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <form id="quick-reservation-form" onsubmit="event.preventDefault(); submitBookingModal();">
+          <input type="hidden" id="modalVehicleId">
+          <div class="modal-body p-4">
+            <div class="row g-4 mb-4">
+              <div class="col-md-5">
+                <img id="modalVehicleImg" src="" alt="Vehicle" class="rounded-3 w-100" style="aspect-ratio: 16/10; object-fit: cover; border: 1px solid var(--border-gold);">
+                <div class="mt-2 d-flex justify-content-between align-items-center">
+                  <span class="text-muted small">Daily Base Rate:</span>
+                  <span class="fw-bold text-gold" id="modalVehicleRate">$0/day</span>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label-custom">Pickup & Dropoff Depot</label>
+                    <select class="form-control-custom" id="modalDepotSelect" required>
+                      <option value="Boulder Overland Hub (HQ)">Boulder Overland Hub (HQ) – Boulder, CO</option>
+                      <option value="Pacific Coast Depot">Pacific Coast Depot – Portland, OR</option>
+                      <option value="High Sierra Station">High Sierra Station – Lake Tahoe, CA</option>
+                      <option value="Red Rock Gateway">Red Rock Gateway – Moab, UT</option>
+                    </select>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label-custom">Pickup Date</label>
+                    <input type="date" class="form-control-custom" id="modalPickupDate" required onchange="handleModalDateChange()">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label-custom">Dropoff Date</label>
+                    <input type="date" class="form-control-custom" id="modalDropoffDate" required onchange="handleModalDateChange()">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label-custom">Select Protection Plan</label>
+                    <select class="form-control-custom" id="modalInsuranceSelect">
+                      <option value="Full Adventure Shield (Zero Deductible)">Full Adventure Shield ($25/day - Recommended)</option>
+                      <option value="Standard Explorer ($1,000 Deductible)">Standard Explorer Protection (Included)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-3" style="background: var(--bg-muted); border: 1px solid var(--border-light);">
+              <div class="d-flex justify-content-between mb-2 small"><span class="text-muted">Trip Duration:</span><span class="fw-bold" id="modalSummaryDays">5 days</span></div>
+              <div class="d-flex justify-content-between mb-2 small"><span class="text-muted">Standard Preparation & Prep Fee:</span><span class="fw-bold">$85</span></div>
+              <div class="d-flex justify-content-between pt-2 border-top border-secondary-subtle">
+                <span class="fw-bold">Estimated Total:</span>
+                <span class="fw-bold text-gold fs-5" id="modalSummaryTotal">$0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer modal-footer-custom d-flex justify-content-between">
+            <button type="button" class="btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn-gold"><i data-lucide="check" class="w-4 h-4"></i><span>Confirm & Add To Bookings</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo.svg" alt="VanVoyage Logo" height="42">
+          </a>
+          <p class="footer-desc">
+            VanVoyage provides premium campervan, 4x4 overland expedition, and luxury RV rentals for travelers who crave authentic wilderness, scenic highways, and outdoor freedom.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Navigation</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="vehicles.html" class="footer-link">Fleet & Vehicles</a></li>
+            <li><a href="destinations.html" class="footer-link">Destinations</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Depots</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="footer-heading">Customer Hub</h5>
+          <ul class="footer-links list-unstyled">
+            <li><a href="login.html" class="footer-link">Account Login</a></li>
+            <li><a href="register.html" class="footer-link">Register Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Customer Dashboard</a></li>
+            <li><a href="bookings.html" class="footer-link">My Bookings</a></li>
+            <li><a href="saved-vehicles.html" class="footer-link">Saved Vehicles</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="footer-heading">Headquarters & Support</h5>
+          <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>742 Overland Ridge Way, Boulder, CO 80302</span></div>
+          <div class="footer-contact-item"><i data-lucide="phone"></i><span>+1 (800) 584-VOYAGE (24/7 Roadside)</span></div>
+          <div class="footer-contact-item"><i data-lucide="mail"></i><span>adventures@vanvoyage.com</span></div>
+          <div class="footer-contact-item"><i data-lucide="clock"></i><span>Depot Check-in: Mon - Sun (8:00 AM - 6:00 PM)</span></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 VanVoyage Adventure Travel Inc. "Adventure Beyond the Ordinary." All rights reserved.</div>
+        <div class="d-flex gap-4">
+          <a href="contact.html" class="footer-link">Privacy Policy</a>
+          <a href="contact.html" class="footer-link">Terms of Service</a>
+          <a href="contact.html" class="footer-link">Rental Agreement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/booking.js"></script>
+
+  <!-- Interactive Filtering Logic -->
+  <script>
+    let activeCategory = 'all';
+    let activePassengers = 'all';
+    let maxPrice = 360;
+    let searchQuery = '';
+    let sortBy = 'featured';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ duration: 800, once: true });
+
+      // Check URL parameters for category or depot from Home search bar
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlCat = urlParams.get('category');
+      if (urlCat && urlCat !== 'all') {
+        activeCategory = urlCat;
+        document.querySelectorAll('#category-pills .filter-pill-btn').forEach(btn => {
+          if (btn.getAttribute('data-category') === urlCat) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+      }
+
+      // Event Listeners for category buttons
+      document.querySelectorAll('#category-pills .filter-pill-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#category-pills .filter-pill-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-category');
+          filterAndRenderVehicles();
+        });
+      });
+
+      // Search input
+      const searchInput = document.getElementById('vehicle-search-input');
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterAndRenderVehicles();
+      });
+
+      // Price slider
+      const priceSlider = document.getElementById('price-slider');
+      const priceDisplay = document.getElementById('price-slider-display');
+      priceSlider.addEventListener('input', (e) => {
+        maxPrice = parseInt(e.target.value, 10);
+        priceDisplay.innerText = `$${maxPrice} / day`;
+        filterAndRenderVehicles();
+      });
+
+      // Passenger buttons
+      document.querySelectorAll('#passenger-filter-group button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#passenger-filter-group button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activePassengers = btn.getAttribute('data-passengers');
+          filterAndRenderVehicles();
+        });
+      });
+
+      // Sort dropdown
+      document.getElementById('vehicle-sort-select').addEventListener('change', (e) => {
+        sortBy = e.target.value;
+        filterAndRenderVehicles();
+      });
+
+      filterAndRenderVehicles();
+    });
+
+    function filterAndRenderVehicles() {
+      let list = [...window.VANVOYAGE_DATA.vehicles];
+
+      // Filter by category
+      if (activeCategory !== 'all') {
+        list = list.filter(v => v.category === activeCategory);
+      }
+
+      // Filter by max price
+      list = list.filter(v => v.dailyRate <= maxPrice);
+
+      // Filter by passengers
+      if (activePassengers !== 'all') {
+        const minPass = parseInt(activePassengers, 10);
+        list = list.filter(v => v.passengers >= minPass);
+      }
+
+      // Filter by search query
+      if (searchQuery) {
+        list = list.filter(v => 
+          v.name.toLowerCase().includes(searchQuery) ||
+          v.tagline.toLowerCase().includes(searchQuery) ||
+          v.features.some(f => f.toLowerCase().includes(searchQuery)) ||
+          v.fuel.toLowerCase().includes(searchQuery) ||
+          v.drive.toLowerCase().includes(searchQuery)
+        );
+      }
+
+      // Sort
+      if (sortBy === 'price-asc') {
+        list.sort((a, b) => a.dailyRate - b.dailyRate);
+      } else if (sortBy === 'price-desc') {
+        list.sort((a, b) => b.dailyRate - a.dailyRate);
+      } else if (sortBy === 'rating-desc') {
+        list.sort((a, b) => b.rating - a.rating);
+      } else if (sortBy === 'passengers-desc') {
+        list.sort((a, b) => b.passengers - a.passengers);
+      } else {
+        // Featured
+        list.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+      }
+
+      const grid = document.getElementById('fleet-catalog-grid');
+      const emptyState = document.getElementById('catalog-empty-state');
+
+      if (list.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('d-none');
+      } else {
+        emptyState.classList.add('d-none');
+        grid.innerHTML = list.map(v => `
+          <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up">
+            <div class="van-card">
+              <div class="van-card-media">
+                <img src="${v.image}" alt="${v.name}" class="van-card-img" loading="lazy">
+                <span class="van-card-badge">${v.categoryLabel}</span>
+                <button class="van-card-wishlist" data-wishlist-id="${v.id}" onclick="BookingEngine.toggleSave('${v.id}')" aria-label="Save vehicle">
+                  <i data-lucide="heart" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <div class="van-card-body">
+                <div class="van-card-rating">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <span>${v.rating}</span>
+                  <span class="text-muted">(${v.reviewsCount} reviews)</span>
+                </div>
+                <h3 class="van-card-title">${v.name}</h3>
+                <p class="van-card-tagline">${v.tagline}</p>
+                
+                <div class="van-specs-grid">
+                  <div class="van-spec-item">
+                    <i data-lucide="users"></i>
+                    <span>${v.passengers} Seats</span>
+                  </div>
+                  <div class="van-spec-item">
+                    <i data-lucide="moon"></i>
+                    <span>Sleeps ${v.sleeps}</span>
+                  </div>
+                  <div class="van-spec-item">
+                    <i data-lucide="gauge"></i>
+                    <span>${v.drive}</span>
+                  </div>
+                </div>
+
+                <div class="van-card-features">
+                  ${v.features.slice(0, 3).map(f => `<span class="feature-pill">${f}</span>`).join('')}
+                </div>
+
+                <div class="van-card-footer">
+                  <div class="van-price-wrap">
+                    <span class="van-price-num">$${v.dailyRate}</span>
+                    <span class="van-price-per">per night</span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn-outline-gold btn-sm-custom" onclick="openVehicleDetailsModal('${v.id}')">
+                      <span>Details</span>
+                    </button>
+                    <button class="btn-gold btn-sm-custom" onclick="BookingEngine.openBookingModal('${v.id}')">
+                      <span>Book</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      BookingEngine.updateWishlistBadges();
+      initLucide();
+    }
+
+    function resetAllFilters() {
+      activeCategory = 'all';
+      activePassengers = 'all';
+      maxPrice = 360;
+      searchQuery = '';
+      document.getElementById('vehicle-search-input').value = '';
+      document.getElementById('price-slider').value = 360;
+      document.getElementById('price-slider-display').innerText = '$360 / day';
+      document.querySelectorAll('#category-pills .filter-pill-btn').forEach((b, idx) => {
+        if (idx === 0) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+      document.querySelectorAll('#passenger-filter-group button').forEach((b, idx) => {
+        if (idx === 0) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+      filterAndRenderVehicles();
+    }
+
+    function openVehicleDetailsModal(vehicleId) {
+      const v = window.VANVOYAGE_DATA.vehicles.find(item => item.id === vehicleId);
+      if (!v) return;
+
+      document.getElementById('detailModalCategory').innerText = v.categoryLabel;
+      document.getElementById('detailModalTitle').innerText = v.name;
+      document.getElementById('detailModalRating').innerText = v.rating;
+      document.getElementById('detailModalReviews').innerText = v.reviewsCount;
+      document.getElementById('detailModalRate').innerText = `$${v.dailyRate}`;
+      document.getElementById('detailModalDescription').innerText = v.tagline + " " + (v.description || "Fully equipped with modern creature comforts, off-grid lithium energy, and backcountry exploration equipment.");
+
+      const mainImg = document.getElementById('detailModalMainImg');
+      mainImg.src = v.image;
+
+      // Thumbnails
+      const thumbContainer = document.getElementById('detailModalThumbnails');
+      const gallery = v.gallery && v.gallery.length ? v.gallery : [v.image];
+      thumbContainer.innerHTML = gallery.map((imgUrl, i) => `
+        <img src="${imgUrl}" alt="Gallery ${i}" class="rounded-2" style="width: 70px; height: 50px; object-fit: cover; cursor: pointer; border: ${i===0 ? '2px solid var(--color-gold)' : '1px solid var(--border-light)'};" onclick="switchDetailModalImg('${imgUrl}', this)">
+      `).join('');
+
+      // Specifications Grid
+      const specsGrid = document.getElementById('detailModalSpecsGrid');
+      specsGrid.innerHTML = `
+        <div class="col-6"><span class="text-muted">Engine:</span> <strong class="text-main">${v.specifications.engine}</strong></div>
+        <div class="col-6"><span class="text-muted">Transmission:</span> <strong class="text-main">${v.transmission}</strong></div>
+        <div class="col-6"><span class="text-muted">Fuel & Range:</span> <strong class="text-main">${v.specifications.fuelCapacity}</strong></div>
+        <div class="col-6"><span class="text-muted">Drive System:</span> <strong class="text-main">${v.drive}</strong></div>
+        <div class="col-6"><span class="text-muted">Solar & Power:</span> <strong class="text-main">${v.specifications.electrical}</strong></div>
+        <div class="col-6"><span class="text-muted">Ground Clearance:</span> <strong class="text-main">${v.specifications.clearance}</strong></div>
+      `;
+
+      // Amenities List
+      const amenitiesList = document.getElementById('detailModalAmenitiesList');
+      amenitiesList.innerHTML = v.amenities.map(a => `
+        <li class="col-md-6 col-12 d-flex align-items-center gap-2">
+          <i data-lucide="check" class="text-gold w-4 h-4 flex-shrink-0"></i>
+          <span>${a}</span>
+        </li>
+      `).join('');
+
+      // Modal action buttons
+      document.getElementById('detailModalBookBtn').onclick = () => {
+        const detailsModalEl = document.getElementById('vehicleDetailsModal');
+        const bsDetailsModal = bootstrap.Modal.getInstance(detailsModalEl);
+        if (bsDetailsModal) bsDetailsModal.hide();
+        BookingEngine.openBookingModal(v.id);
+      };
+
+      const wishlistBtn = document.getElementById('detailModalWishlistBtn');
+      wishlistBtn.onclick = () => {
+        BookingEngine.toggleSave(v.id);
+      };
+
+      initLucide();
+      const modalEl = new bootstrap.Modal(document.getElementById('vehicleDetailsModal'));
+      modalEl.show();
+    }
+
+    function switchDetailModalImg(url, el) {
+      document.getElementById('detailModalMainImg').src = url;
+      document.querySelectorAll('#detailModalThumbnails img').forEach(img => {
+        img.style.border = '1px solid var(--border-light)';
+      });
+      el.style.border = '2px solid var(--color-gold)';
+    }
+
+    function handleModalDateChange() {
+      const vid = document.getElementById('modalVehicleId').value;
+      const v = window.VANVOYAGE_DATA.vehicles.find(item => item.id === vid);
+      if (v) BookingEngine.calculateModalTotal(v.dailyRate);
+    }
+
+    function submitBookingModal() {
+      const vid = document.getElementById('modalVehicleId').value;
+      const vehicle = window.VANVOYAGE_DATA.vehicles.find(v => v.id === vid);
+      if (!vehicle) return;
+
+      const pDate = document.getElementById('modalPickupDate').value;
+      const dDate = document.getElementById('modalDropoffDate').value;
+      const depot = document.getElementById('modalDepotSelect').value;
+      const insurance = document.getElementById('modalInsuranceSelect').value;
+
+      const diffDays = Math.max(1, Math.ceil((new Date(dDate) - new Date(pDate)) / (1000 * 60 * 60 * 24)));
+      const totalAmount = (vehicle.dailyRate * diffDays) + 85 + (diffDays * 25);
+
+      const newBooking = {
+        id: `VV-${Math.floor(10000 + Math.random() * 90000)}`,
+        vehicleId: vehicle.id,
+        vehicleName: vehicle.name,
+        vehicleImage: vehicle.image,
+        pickupDate: pDate,
+        dropoffDate: dDate,
+        days: diffDays,
+        pickupLocation: depot,
+        dropoffLocation: depot,
+        dailyRate: vehicle.dailyRate,
+        totalAmount: totalAmount,
+        status: "Upcoming",
+        statusClass: "badge-upcoming",
+        passengers: vehicle.passengers,
+        addons: ["Leave No Trace Clean Kit ($35)"],
+        bookingDate: new Date().toISOString().split('T')[0],
+        insurance: insurance,
+        confirmationCode: `VV-RES-${Math.floor(1000 + Math.random() * 9000)}`
+      };
+
+      BookingEngine.createBooking(newBooking);
+
+      const modalEl = document.getElementById('bookingModal');
+      const bsModal = bootstrap.Modal.getInstance(modalEl);
+      if (bsModal) bsModal.hide();
+
+      showToast(`Reservation confirmed for ${vehicle.name}! Redirecting...`, "check-circle");
+      setTimeout(() => {
+        window.location.href = 'bookings.html';
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
